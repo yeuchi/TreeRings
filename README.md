@@ -7,8 +7,8 @@ Camera/Gallery -> Photo -> Select Path -> Deriviative -> Count -> Render Path-no
 
 # References
 
-1. Android10CameraBasics - C.T. Yeung 
+1. Android10CameraBasics - C.T. Yeung \
 https://github.com/yeuchi/Android10CameraBasic
 
-2. NDKExercise - C.T. Yeung
+2. NDKExercise - C.T. Yeung \
 https://github.com/yeuchi/NDKExercise
