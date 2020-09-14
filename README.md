@@ -12,3 +12,6 @@ https://github.com/yeuchi/Android10CameraBasic
 
 2. NDKExercise - C.T. Yeung \
 https://github.com/yeuchi/NDKExercise
+
+3. Get started with the Navigation component \
+https://developer.android.com/guide/navigation/navigation-getting-started
