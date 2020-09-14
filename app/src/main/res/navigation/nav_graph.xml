@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/mainFragment">
+
+    <fragment
+            android:id="@+id/mainFragment"
+            android:name="com.ctyeung.treerings.MainActivityFragment"
+            android:label="Splash Fragment"
+            tools:layout="@layout/fragment_main">
+
+        <action android:id="@+id/launchPreview" app:destination="@id/previewFragment"/>
+        <action android:id="@+id/launchConfig" app:destination="@id/configFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/configFragment" android:name="com.ctyeung.treerings.ConfigFragment"
+              android:label="fragment_config" tools:layout="@layout/fragment_config"/>
+
+    <fragment android:id="@+id/previewFragment" android:name="com.ctyeung.treerings.PreviewFragment"
+              android:label="fragment_preview" tools:layout="@layout/fragment_preview">
+        <action android:id="@+id/action_previewFragment_to_photoFragment" app:destination="@id/photoFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/photoFragment" android:name="com.ctyeung.treerings.PhotoFragment"
+              android:label="fragment_photo" tools:layout="@layout/fragment_photo"/>
+
+
+</navigation>
