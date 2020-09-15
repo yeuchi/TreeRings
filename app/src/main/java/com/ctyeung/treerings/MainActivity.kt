@@ -1,64 +1,45 @@
 package com.ctyeung.treerings
 
+import android.R.attr
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.Snackbar
-import android.support.v7.app.AppCompatActivity;
-import android.view.Menu
-import android.view.MenuItem
-import androidx.navigation.Navigation.findNavController
+import android.provider.MediaStore
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_main.*
 
 class MainActivity : AppCompatActivity() {
+    val REQUEST_TAKE_PHOTO = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
-
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-        }
-
-        // Example of a call to a native method
-       // sample_text.text = stringFromJNI()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
+    override fun onActivityResult(requestCode: Int,
+                                  resultCode: Int,
+                                  data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        for (fragment in supportFragmentManager.fragments) {
 
-    /*
-     * Back button support
-     */
-    override fun onSupportNavigateUp() =
-        findNavController(this, R.id.mainFragment).navigateUp()
+            when(requestCode) {
+                REQUEST_TAKE_PHOTO -> {
+                    fragment.onActivityResult(requestCode, resultCode, data)
+                }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        return when (item.itemId) {
-            R.id.action_settings -> true
-            else -> super.onOptionsItemSelected(item)
+                else -> {
+                    Toast.makeText(this, "bad request code", Toast.LENGTH_LONG).show()
+                }
+            }
         }
     }
 
-    /**
-     * A native method that is implemented by the 'native-lib' native library,
-     * which is packaged with this application.
-     */
-    external fun stringFromJNI(): String
-
-    companion object {
-
-        // Used to load the 'native-lib' library on application startup.
-        init {
-            System.loadLibrary("native-lib")
-        }
+    fun invokeCamera() {
+        val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        // Don't call resolve in Android 11, API 30
+        // if (takePictureIntent.resolveActivity(packageManager) != null) {
+        startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO)
+        // }
     }
 }

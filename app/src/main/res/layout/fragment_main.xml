@@ -1,51 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <layout>
     <data>
         <variable
-                name="layout"
-                type="com.ctyeung.treerings.MainActivityFragment"/>
+            name="layout"
+            type="com.ctyeung.treerings.MainFragment"/>
     </data>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFragment">
+
     <LinearLayout
-            android:id="@+id/mainFragment"
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center"
-            tools:showIn="@layout/activity_main"
-            tools:context=".MainActivityFragment"
-            app:navGraph="@navigation/nav_graph"
-            app:defaultNavHost="true">
+        android:id="@+id/mainFragment"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
 
         <TextView
-                android:id="@+id/sample_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hello World!"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+            android:id="@+id/sample_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello World!"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <Button android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="Configuration"
-                android:id="@+id/btnCfg"
-                android:onClick="@{()->layout.onClickConfig()}"/>
+            android:layout_height="wrap_content"
+            android:text="Configuration"
+            android:id="@+id/btnCfg"
+            android:onClick="@{()->layout.onClickConfig()}"/>
 
         <Button android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="Camera"
-                android:onClick="@{()->layout.onClickCamera()}"
-                android:id="@+id/btnCamera"/>
+            android:layout_height="wrap_content"
+            android:text="Camera"
+            android:onClick="@{()->layout.onClickCamera()}"
+            android:id="@+id/btnCamera"/>
 
         <Button android:layout_width="200dp"
-                android:layout_height="wrap_content"
-                android:text="Gallery"
-                android:onClick="@{()->layout.onClickGallery()}"
-                android:id="@+id/btnStorage"/>
+            android:layout_height="wrap_content"
+            android:text="Gallery"
+            android:onClick="@{()->layout.onClickGallery()}"
+            android:id="@+id/btnStorage"/>
 
     </LinearLayout>
+
+</FrameLayout>
+
 </layout>
