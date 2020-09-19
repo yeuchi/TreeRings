@@ -3,6 +3,7 @@ package com.ctyeung.treerings
 import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.Matrix
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
@@ -38,6 +39,8 @@ class MainFragment : Fragment() {
     val DELETE_PERMISSION_REQUEST = 0x1033
     val TRASH_PERMISSION_REQUEST = 0x1034
     val WRITE_PERMISSION_REQUEST = 0x00000002
+    val REQUEST_TAKE_PHOTO = 1
+    val PICK_PHOTO_CODE = 1046
 
     var photoURI: Uri?= null
     var currentPhotoPath: String?=null
@@ -82,11 +85,13 @@ class MainFragment : Fragment() {
     }
 
     fun onClickCamera() {
-        (this.activity as MainActivity).invokeCamera()
+        val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        startActivityForResult(intent, REQUEST_TAKE_PHOTO)
     }
 
     fun onClickGallery() {
-        (this.activity as MainActivity).invokeGallery()
+        val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
+        startActivityForResult(intent, PICK_PHOTO_CODE)
     }
 
     fun onClickNext() {
@@ -98,23 +103,43 @@ class MainFragment : Fragment() {
     override fun onActivityResult(requestCode: Int,
                                   resultCode: Int,
                                   data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (resultCode == Activity.RESULT_OK) {
-            handleTakePhoto(data);
+        if(data != null) {
+            when (requestCode) {
+
+                REQUEST_TAKE_PHOTO -> handleTakePhoto(data);
+
+                PICK_PHOTO_CODE -> handleLoadPhoto(data);
+
+                else -> {
+                    Toast.makeText(this.context, "requestCode NOT OK", Toast.LENGTH_LONG).show()
+                }
+            }
+            return
         }
-        else {
-            Toast.makeText(this.context, "resultCode NOT OK", Toast.LENGTH_LONG).show()
-        }
+        Toast.makeText(this.context, "data missing", Toast.LENGTH_LONG).show()
+    }
+
+    fun handleLoadPhoto(data: Intent?){
+        val photoUri:String? = data?.data.toString();
+        if(photoUri != null)
+            photoStore.read(photoUri, binding!!.layout!!.photoPreview)
     }
 
     fun handleTakePhoto(data: Intent?) {
-        var imageBitmap: Bitmap?=null
+        var bmp: Bitmap?=null
 
         if (data != null && data?.extras != null) {
-            imageBitmap = data?.extras?.get("data") as Bitmap
-            binding?.layout?.photoPreview?.setImageBitmap(imageBitmap!!)
+            bmp = data?.extras?.get("data") as Bitmap
+
+            if(bmp.width > bmp.height) {
+                val matrix = Matrix()
+                matrix.postRotate(90F)
+                bmp = Bitmap.createBitmap(bmp, 0,0, bmp.width, bmp.height, matrix, true)
+            }
+
+            binding?.layout?.photoPreview?.setImageBitmap(bmp!!)
             photoStore.setNames("hello", "goldBucket")
-            val returned = photoStore.save(imageBitmap)
+            val returned = photoStore.save(bmp!!)
 
             if(returned != "")
                 Toast.makeText(this.context, returned, Toast.LENGTH_LONG).show()

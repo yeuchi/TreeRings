@@ -22,30 +22,5 @@ class MainActivity : AppCompatActivity() {
                                   resultCode: Int,
                                   data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        for (fragment in supportFragmentManager.fragments) {
-
-            when(requestCode) {
-                REQUEST_TAKE_PHOTO -> {
-                    fragment.onActivityResult(requestCode, resultCode, data)
-                }
-
-                else -> {
-                    Toast.makeText(this, "bad request code", Toast.LENGTH_LONG).show()
-                }
-            }
-        }
-    }
-
-    fun invokeCamera() {
-        val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-        // Don't call resolve in Android 11, API 30
-        // if (takePictureIntent.resolveActivity(packageManager) != null) {
-        startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO)
-        // }
-    }
-
-    fun invokeGallery() {
-        val takePictureIntent = Intent(MediaStore.INTENT_ACTION_MEDIA_SEARCH)
-        startActivityForResult(takePictureIntent, REQUEST_GALLERY)
     }
 }
