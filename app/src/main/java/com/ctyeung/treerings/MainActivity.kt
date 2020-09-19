@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     val REQUEST_TAKE_PHOTO = 1
+    val REQUEST_GALLERY = 2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,5 +42,10 @@ class MainActivity : AppCompatActivity() {
         // if (takePictureIntent.resolveActivity(packageManager) != null) {
         startActivityForResult(takePictureIntent, REQUEST_TAKE_PHOTO)
         // }
+    }
+
+    fun invokeGallery() {
+        val takePictureIntent = Intent(MediaStore.INTENT_ACTION_MEDIA_SEARCH)
+        startActivityForResult(takePictureIntent, REQUEST_GALLERY)
     }
 }

@@ -11,8 +11,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.ctyeung.treerings.databinding.FragmentMainBinding
+import kotlinx.android.synthetic.main.fragment_main.*
 import java.io.File
 
 // TODO: Rename parameter arguments, choose names that match
@@ -46,6 +49,7 @@ class MainFragment : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
+        photoStore = PhotoStorage(this.requireActivity().applicationContext)
     }
 
     override fun onCreateView(
@@ -58,35 +62,37 @@ class MainFragment : Fragment() {
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment MainFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            MainFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    /**
+     * Use this factory method to create a new instance of
+     * this fragment using the provided parameters.
+     *
+     * @param param1 Parameter 1.
+     * @param param2 Parameter 2.
+     * @return A new instance of fragment MainFragment.
+     */
+    // TODO: Rename and change types and number of parameters
+    @JvmStatic
+    fun newInstance(param1: String, param2: String) =
+        MainFragment().apply {
+            arguments = Bundle().apply {
+                putString(ARG_PARAM1, param1)
+                putString(ARG_PARAM2, param2)
             }
+        }
     }
 
-    public fun onClickConfig() {
-
-    }
-
-    public fun onClickCamera() {
+    fun onClickCamera() {
         (this.activity as MainActivity).invokeCamera()
     }
 
-    public fun onClickGallery() {
+    fun onClickGallery() {
+        (this.activity as MainActivity).invokeGallery()
+    }
 
+    fun onClickNext() {
+        val str = photoStore.imageUri?:""
+        var bundle = bundleOf("url" to str)
+        binding!!.root.findNavController().navigate(R.id.action_mainFragment_to_photoFragment, bundle)
     }
 
     override fun onActivityResult(requestCode: Int,
@@ -106,8 +112,7 @@ class MainFragment : Fragment() {
 
         if (data != null && data?.extras != null) {
             imageBitmap = data?.extras?.get("data") as Bitmap
-            // TODO - specify preview
-            //    binding?.layout?.imageView?.setImageBitmap(imageBitmap!!)
+            binding?.layout?.photoPreview?.setImageBitmap(imageBitmap!!)
             photoStore.setNames("hello", "goldBucket")
             val returned = photoStore.save(imageBitmap)
 
@@ -115,8 +120,7 @@ class MainFragment : Fragment() {
                 Toast.makeText(this.context, returned, Toast.LENGTH_LONG).show()
         }
         else if(currentPhotoPath!=null) {
-            // TODO - specify preview
-            //   photoStore.read(currentPhotoPath!!, imageView)
+            photoStore.read(currentPhotoPath!!, binding!!.layout!!.photoPreview)
             galleryAddPic(currentPhotoPath!!)
         }
         //revokeUriPermission(photoURI, Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
