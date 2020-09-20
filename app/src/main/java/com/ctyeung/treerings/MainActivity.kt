@@ -1,11 +1,8 @@
 package com.ctyeung.treerings
 
-import android.R.attr
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.provider.MediaStore
-import android.widget.Toast
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 
 
@@ -16,6 +13,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.setHomeButtonEnabled(true)
+    }
+
+    fun enableBackButton(show:Boolean) {
+        supportActionBar?.setDisplayHomeAsUpEnabled(show)
     }
 
     override fun onActivityResult(requestCode: Int,
@@ -24,11 +26,12 @@ class MainActivity : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
     }
 
-    override fun onBackPressed() {
-        val fragment =
-            this.supportFragmentManager.findFragmentById(R.id.photoFragment)
-        (fragment as? IOnBackPressed)?.onBackPressed()?.not()?.let {
-            super.onBackPressed()
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id: Int = item.getItemId()
+        if (id == android.R.id.home) {
+            onBackPressed()
+            return true
         }
+        return super.onOptionsItemSelected(item)
     }
 }

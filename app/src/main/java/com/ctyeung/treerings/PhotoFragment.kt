@@ -1,5 +1,6 @@
 package com.ctyeung.treerings
 
+import android.app.ActionBar
 import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -38,17 +39,6 @@ class PhotoFragment : Fragment(), IOnBackPressed {
             param2 = it.getString(ARG_PARAM2)
         }
         photoStore = PhotoStorage(this.requireActivity().applicationContext)
-
-        activity?.onBackPressedDispatcher?.addCallback(this, object : OnBackPressedCallback(true) {
-            override fun handleOnBackPressed() {
-//                if(shouldInterceptBackPress()){
-//                    // in here you can do logic when backPress is clicked
-//                }else{
-                    isEnabled = false
-                    activity?.onBackPressed()
-                //}
-            }
-        })
     }
 
     override fun onCreateView(
@@ -63,6 +53,8 @@ class PhotoFragment : Fragment(), IOnBackPressed {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        (activity as MainActivity).enableBackButton(true)
+
         val uriString = arguments?.getString("url")
         if(uriString != null) {
             val photoUri: Uri? = Uri.parse(uriString)
@@ -70,10 +62,9 @@ class PhotoFragment : Fragment(), IOnBackPressed {
         }
     }
 
-    fun loadPhoto(photoUri:Uri?) {
+    private fun loadPhoto(photoUri:Uri?) {
         if(photoUri != null)
             photoStore.read(requireActivity().contentResolver, photoUri, binding!!.layout!!.photoView)
-
     }
 
     companion object {
