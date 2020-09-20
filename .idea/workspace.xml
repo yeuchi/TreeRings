@@ -24,13 +24,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/MainFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/MainFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/PhotoFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/PhotoFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/PhotoStorage.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/PhotoStorage.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_photo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_photo.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,8 +51,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="Kotlin Interface" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -153,66 +151,70 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="490" y="180" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1600558374084" />
-    <state width="1369" height="125" key="GridCell.Tab.0.bottom" timestamp="1600611029162">
+    <state x="465" y="211" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600618284719">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="465" y="211" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1600618284719" />
+    <state width="1369" height="218" key="GridCell.Tab.0.bottom" timestamp="1600618326817">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.0.bottom/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215066185" />
-    <state width="1369" height="125" key="GridCell.Tab.0.bottom/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1600611029162" />
+    <state width="1369" height="218" key="GridCell.Tab.0.bottom/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1600618326817" />
     <state width="1369" height="232" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1600560089140" />
-    <state width="1369" height="125" key="GridCell.Tab.0.center" timestamp="1600611029161">
+    <state width="1369" height="218" key="GridCell.Tab.0.center" timestamp="1600618326817">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.0.center/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215066185" />
-    <state width="1369" height="125" key="GridCell.Tab.0.center/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1600611029161" />
+    <state width="1369" height="218" key="GridCell.Tab.0.center/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1600618326817" />
     <state width="1369" height="232" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1600560089140" />
-    <state width="1369" height="125" key="GridCell.Tab.0.left" timestamp="1600611029161">
+    <state width="1369" height="218" key="GridCell.Tab.0.left" timestamp="1600618326817">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.0.left/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215066184" />
-    <state width="1369" height="125" key="GridCell.Tab.0.left/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1600611029161" />
+    <state width="1369" height="218" key="GridCell.Tab.0.left/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1600618326817" />
     <state width="1369" height="232" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1600560089139" />
-    <state width="1369" height="125" key="GridCell.Tab.0.right" timestamp="1600611029162">
+    <state width="1369" height="218" key="GridCell.Tab.0.right" timestamp="1600618326817">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.0.right/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215066185" />
-    <state width="1369" height="125" key="GridCell.Tab.0.right/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1600611029162" />
+    <state width="1369" height="218" key="GridCell.Tab.0.right/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1600618326817" />
     <state width="1369" height="232" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1600560089140" />
-    <state width="1369" height="125" key="GridCell.Tab.1.bottom" timestamp="1600611049147">
+    <state width="1369" height="218" key="GridCell.Tab.1.bottom" timestamp="1600618326818">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.1.bottom/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215060255" />
-    <state width="1369" height="125" key="GridCell.Tab.1.bottom/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1600611049147" />
+    <state width="1369" height="218" key="GridCell.Tab.1.bottom/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1600618326818" />
     <state width="1369" height="232" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1600560089141" />
-    <state width="1369" height="125" key="GridCell.Tab.1.center" timestamp="1600611049146">
+    <state width="1369" height="218" key="GridCell.Tab.1.center" timestamp="1600618326818">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.1.center/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215060254" />
-    <state width="1369" height="125" key="GridCell.Tab.1.center/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1600611049146" />
+    <state width="1369" height="218" key="GridCell.Tab.1.center/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1600618326818" />
     <state width="1369" height="232" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1600560089141" />
-    <state width="1369" height="125" key="GridCell.Tab.1.left" timestamp="1600611049145">
+    <state width="1369" height="218" key="GridCell.Tab.1.left" timestamp="1600618326817">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.1.left/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215060254" />
-    <state width="1369" height="125" key="GridCell.Tab.1.left/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1600611049145" />
+    <state width="1369" height="218" key="GridCell.Tab.1.left/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1600618326817" />
     <state width="1369" height="232" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1600560089140" />
-    <state width="1369" height="125" key="GridCell.Tab.1.right" timestamp="1600611049147">
+    <state width="1369" height="218" key="GridCell.Tab.1.right" timestamp="1600618326818">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.1.right/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215060255" />
-    <state width="1369" height="125" key="GridCell.Tab.1.right/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1600611049147" />
+    <state width="1369" height="218" key="GridCell.Tab.1.right/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1600618326818" />
     <state width="1369" height="232" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1600560089141" />
-    <state x="435" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1600608991119">
+    <state x="435" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1600623136765">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="483" y="-606" key="com.intellij.ide.util.TipDialog/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600131460538" />
-    <state x="435" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1600608991119" />
+    <state x="435" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1600623136765" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/PhotoStorage.kt</url>
-          <line>63</line>
+          <line>64</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
@@ -224,9 +226,10 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="app">
-        <watch expression="binding.photo.photoView" language="kotlin" custom="import kotlinx.android.synthetic.main.fragment_photo.photoView" />
-        <watch expression="binding.photo" language="kotlin" />
-        <watch expression="activity.actionBar" language="kotlin" />
+        <watch expression="points[0]" language="kotlin" />
+        <watch expression="p" language="kotlin" />
+        <watch expression="points[1]" language="kotlin" />
+        <watch expression="p1" language="JAVA" />
       </configuration>
     </watches-manager>
   </component>

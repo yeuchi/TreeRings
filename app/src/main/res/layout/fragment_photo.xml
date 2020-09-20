@@ -23,6 +23,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
+            <ImageView
+                android:id="@+id/lineView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
         </RelativeLayout>
 
     </FrameLayout>

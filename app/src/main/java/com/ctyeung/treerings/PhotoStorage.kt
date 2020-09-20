@@ -22,6 +22,7 @@ class PhotoStorage(val context:Context) {
     var bucketName:String?=null
     var imageUri:Uri?=null
     var values:ContentValues?=null
+    var bmp:Bitmap?=null
 
     fun setNames(displayname:String, bucketName:String) {
         this.displayname = displayname
@@ -40,11 +41,11 @@ class PhotoStorage(val context:Context) {
 
     fun read(contentResolver: ContentResolver,uri:Uri, imageView:ImageView):Boolean {
         try {
-            var bmp = MediaStore.Images.Media.getBitmap(contentResolver, uri)
+            bmp = MediaStore.Images.Media.getBitmap(contentResolver, uri)
             if(bmp == null)
                 throw java.lang.Exception()
 
-            bmp = BitmapUtils.setPortrait(bmp)
+            bmp = BitmapUtils.setPortrait(bmp!!)
             imageView?.setImageBitmap(bmp!!)
             imageUri = uri
             return true
@@ -74,11 +75,11 @@ class PhotoStorage(val context:Context) {
             bmOptions.inJustDecodeBounds = false
             bmOptions.inSampleSize = scaleFactor
             bmOptions.inPurgeable = true
-            var bmp = BitmapFactory.decodeFile(photoPath, bmOptions)
+            bmp = BitmapFactory.decodeFile(photoPath, bmOptions)
             if(bmp == null)
                 throw java.lang.Exception()
 
-            bmp = BitmapUtils.setPortrait(bmp)
+            bmp = BitmapUtils.setPortrait(bmp!!)
             imageView?.setImageBitmap(bmp!!)
             return true
         }
