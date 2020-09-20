@@ -42,8 +42,6 @@ class MainFragment : Fragment() {
     val REQUEST_TAKE_PHOTO = 1
     val PICK_PHOTO_CODE = 1046
 
-    var photoURI: Uri?= null
-    var currentPhotoPath: String?=null
     lateinit var photoStore:PhotoStorage
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -95,9 +93,11 @@ class MainFragment : Fragment() {
     }
 
     fun onClickNext() {
-        val str = photoStore.imageUri?:""
-        var bundle = bundleOf("url" to str)
-        binding!!.root.findNavController().navigate(R.id.action_mainFragment_to_photoFragment, bundle)
+        if(photoStore.imageUri != null) {
+            val str = photoStore.imageUri.toString() ?: ""
+            var bundle = bundleOf("url" to str)
+            binding!!.root.findNavController().navigate(R.id.action_mainFragment_to_photoFragment, bundle)
+        }
     }
 
     override fun onActivityResult(requestCode: Int,
@@ -120,9 +120,10 @@ class MainFragment : Fragment() {
     }
 
     fun handleLoadPhoto(data: Intent?){
-        val photoUri:String? = data?.data.toString();
+        val photoUri:Uri = data?.data!!;
         if(photoUri != null)
-            photoStore.read(photoUri, binding!!.layout!!.photoPreview)
+            photoStore.read(requireActivity().contentResolver, photoUri, binding!!.layout!!.photoPreview)
+
     }
 
     fun handleTakePhoto(data: Intent?) {
@@ -130,12 +131,7 @@ class MainFragment : Fragment() {
 
         if (data != null && data?.extras != null) {
             bmp = data?.extras?.get("data") as Bitmap
-
-            if(bmp.width > bmp.height) {
-                val matrix = Matrix()
-                matrix.postRotate(90F)
-                bmp = Bitmap.createBitmap(bmp, 0,0, bmp.width, bmp.height, matrix, true)
-            }
+            bmp = BitmapUtils.setPortrait(bmp)
 
             binding?.layout?.photoPreview?.setImageBitmap(bmp!!)
             photoStore.setNames("hello", "goldBucket")
@@ -143,19 +139,6 @@ class MainFragment : Fragment() {
 
             if(returned != "")
                 Toast.makeText(this.context, returned, Toast.LENGTH_LONG).show()
-        }
-        else if(currentPhotoPath!=null) {
-            photoStore.read(currentPhotoPath!!, binding!!.layout!!.photoPreview)
-            galleryAddPic(currentPhotoPath!!)
-        }
-        //revokeUriPermission(photoURI, Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
-    }
-
-    private fun galleryAddPic(photoPath:String) {
-        Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE).also { mediaScanIntent ->
-            val f = File(photoPath)
-            mediaScanIntent.data = Uri.fromFile(f)
-            this.activity?.sendBroadcast(mediaScanIntent)
         }
     }
 }

@@ -3,6 +3,7 @@ package com.ctyeung.treerings
 import android.content.ContentResolver
 import android.content.ContentValues
 import android.content.Context
+import android.content.Intent
 import android.database.Cursor
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -13,6 +14,7 @@ import android.text.format.DateUtils
 import android.util.Log
 import android.widget.ImageView
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.File
 
 
 class PhotoStorage(val context:Context) {
@@ -36,13 +38,15 @@ class PhotoStorage(val context:Context) {
         imageUri = context.contentResolver.insert(collection, values)
     }
 
-    fun read(contentResolver: ContentResolver,imageView:ImageView):Boolean {
+    fun read(contentResolver: ContentResolver,uri:Uri, imageView:ImageView):Boolean {
         try {
-            val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, imageUri)
-            if(bitmap == null)
+            var bmp = MediaStore.Images.Media.getBitmap(contentResolver, uri)
+            if(bmp == null)
                 throw java.lang.Exception()
 
-            imageView?.setImageBitmap(bitmap!!)
+            bmp = BitmapUtils.setPortrait(bmp)
+            imageView?.setImageBitmap(bmp!!)
+            imageUri = uri
             return true
         }
         catch (e:Exception){
@@ -70,11 +74,12 @@ class PhotoStorage(val context:Context) {
             bmOptions.inJustDecodeBounds = false
             bmOptions.inSampleSize = scaleFactor
             bmOptions.inPurgeable = true
-            val bitmap = BitmapFactory.decodeFile(photoPath, bmOptions)
-            if(bitmap == null)
+            var bmp = BitmapFactory.decodeFile(photoPath, bmOptions)
+            if(bmp == null)
                 throw java.lang.Exception()
 
-            imageView?.setImageBitmap(bitmap!!)
+            bmp = BitmapUtils.setPortrait(bmp)
+            imageView?.setImageBitmap(bmp!!)
             return true
         }
         catch (ex:java.lang.Exception){

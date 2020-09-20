@@ -23,4 +23,12 @@ class MainActivity : AppCompatActivity() {
                                   data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
     }
+
+    override fun onBackPressed() {
+        val fragment =
+            this.supportFragmentManager.findFragmentById(R.id.photoFragment)
+        (fragment as? IOnBackPressed)?.onBackPressed()?.not()?.let {
+            super.onBackPressed()
+        }
+    }
 }
