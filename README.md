@@ -9,7 +9,7 @@ Camera/Gallery -> Photo -> Select Path -> Deriviative -> Count -> Render Path-no
 Select and preview your tree ring image. 
 1. Camera : take a photo.
 2. Gallery : pick a photo from gallery.
-3. Next : navigate to next screen.
+3. Next : navigate to next screen. \
 <img width="220" src="https://user-images.githubusercontent.com/1282659/93717903-460ca780-fb3e-11ea-89b3-40602b661752.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/93717899-43aa4d80-fb3e-11ea-801d-b2d7cfbe4285.jpg">
 
 ### Cross-section Path
