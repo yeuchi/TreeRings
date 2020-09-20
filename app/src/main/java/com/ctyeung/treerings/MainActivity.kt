@@ -20,6 +20,10 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(show)
     }
 
+    fun setTittle(str:String) {
+        supportActionBar?.setTitle(str)
+    }
+
     override fun onActivityResult(requestCode: Int,
                                   resultCode: Int,
                                   data: Intent?) {

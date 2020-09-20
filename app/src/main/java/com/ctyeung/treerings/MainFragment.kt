@@ -66,6 +66,7 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         (activity as MainActivity).enableBackButton(false)
+        (activity as MainActivity).setTittle("Select Photo")
     }
 
     companion object {

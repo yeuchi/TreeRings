@@ -54,6 +54,7 @@ class PhotoFragment : Fragment(), IOnBackPressed {
         super.onViewCreated(view, savedInstanceState)
 
         (activity as MainActivity).enableBackButton(true)
+        (activity as MainActivity).setTittle("Draw Line")
 
         val uriString = arguments?.getString("url")
         if(uriString != null) {
