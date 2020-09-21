@@ -8,14 +8,14 @@ Camera/Gallery -> Photo -> Select Path -> Deriviative -> Count -> Render Path-no
 #### Navigation Graph
 <img width="508" alt="Screen Shot 2020-09-20 at 7 51 47 PM" src="https://user-images.githubusercontent.com/1282659/93726432-95bd9400-fb7b-11ea-9a39-c4d7127aa634.png">
 
-### Camera/Gallery - Select photo
+### Select photo - use camera or gallery 
 Select and preview your tree ring image. 
 1. Camera : take a photo.
 2. Gallery : pick a photo from gallery.
 3. Next : navigate to next screen. \
 <img width="300" alt="starter" src="https://user-images.githubusercontent.com/1282659/93726809-a5d67300-fb7d-11ea-842c-7065f897f563.png"> <img width="220" src="https://user-images.githubusercontent.com/1282659/93726815-abcc5400-fb7d-11ea-8415-56c07d7b719d.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/93726816-af5fdb00-fb7d-11ea-9c59-629c2936bcf7.jpg"> 
 
-### Cross-section - User draw line
+### User draw line - identify rings cross-section 
 Find the best cross-section to count your tree rings. \
 (Try to draw a path that is 'normal' tangent across all rings) 
 1. Touch point #1 : center of tree rings. 
@@ -24,7 +24,7 @@ Find the best cross-section to count your tree rings. \
 4. Next : navigate to detail screen. 
 <img width="220" src="https://user-images.githubusercontent.com/1282659/93726820-b25acb80-fb7d-11ea-8e2b-3124bab7d353.jpg">
 
-### Calculate Result - count rings Xing
+### Count rings - calculation ring xings on line
 Perform image process to find/count rings crossing from user-drawn-line. \
 Render highlight on each ring crossing for inspection. \
 Render count result
