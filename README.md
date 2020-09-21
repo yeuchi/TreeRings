@@ -15,11 +15,14 @@ Select and preview your tree ring image.
 3. Next : navigate to next screen. \
 <img width="220" src="https://user-images.githubusercontent.com/1282659/93717903-460ca780-fb3e-11ea-89b3-40602b661752.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/93717899-43aa4d80-fb3e-11ea-801d-b2d7cfbe4285.jpg">
 
-### Cross-section - Draw line
+### Cross-section - User draw line
 Find the best cross-section to count your tree rings. \
 (Try to draw a path that is 'normal' tangent across all rings) 
 1. Touch point #1 : center of tree rings. 
 2. Touch point #2 : most outer ring position.
+
+### Calculate Result - image process, count rings crossings.
+1. Adjust sensitivity.
 
 # References
 1. Android10CameraBasics - C.T. Yeung \
