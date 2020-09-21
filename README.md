@@ -20,6 +20,8 @@ Find the best cross-section to count your tree rings. \
 (Try to draw a path that is 'normal' tangent across all rings) 
 1. Touch point #1 : center of tree rings. 
 2. Touch point #2 : most outer ring position.
+3. Touch any point : update/correct #1 or #2 (line)
+4. Next : navigate to detail screen. \
 <img width="220" src="https://user-images.githubusercontent.com/1282659/93726820-b25acb80-fb7d-11ea-8e2b-3124bab7d353.jpg">
 
 ### Calculate Result - count rings Xing
