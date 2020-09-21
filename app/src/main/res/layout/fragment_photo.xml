@@ -15,18 +15,25 @@
         tools:context=".PhotoFragment">
 
         <RelativeLayout
+            android:id="@+id/line_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/photoView"
+                android:id="@+id/photo_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
-
+<!--
             <ImageView
                 android:id="@+id/lineView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
+                -->
+
+            <com.ctyeung.treerings.MyPaperView
+                android:id="@+id/paper"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"/>
 
         </RelativeLayout>
 

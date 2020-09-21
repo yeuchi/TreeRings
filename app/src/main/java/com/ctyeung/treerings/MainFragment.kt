@@ -129,7 +129,7 @@ class MainFragment : Fragment() {
     fun handleLoadPhoto(data: Intent?){
         val photoUri:Uri = data?.data!!;
         if(photoUri != null)
-            photoStore.read(requireActivity().contentResolver, photoUri, binding!!.layout!!.photoPreview)
+            photoStore.read(requireActivity().contentResolver, photoUri, binding!!.layout!!.photo_preview)
 
     }
 
@@ -140,7 +140,7 @@ class MainFragment : Fragment() {
             bmp = data?.extras?.get("data") as Bitmap
             bmp = BitmapUtils.setPortrait(bmp)
 
-            binding?.layout?.photoPreview?.setImageBitmap(bmp!!)
+            binding?.layout?.photo_preview?.setImageBitmap(bmp!!)
             photoStore.setNames("hello", "goldBucket")
             val returned = photoStore.save(bmp!!)
 
