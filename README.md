@@ -21,7 +21,10 @@ Find the best cross-section to count your tree rings. \
 1. Touch point #1 : center of tree rings. 
 2. Touch point #2 : most outer ring position.
 
-### Calculate Result - image process, count rings crossings.
+### Calculate Result - count rings Xing
+Perform image process to find/count rings crossing from user-drawn-line. \
+Render highlight on each ring crossing for inspection. \
+Render count result
 1. Adjust sensitivity.
 
 # References
