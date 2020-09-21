@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
@@ -19,9 +20,7 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 /**
- * A simple [Fragment] subclass.
- * Use the [PhotoFragment.newInstance] factory method to
- * create an instance of this fragment.
+ * TODO: Add tutorial dialog
  */
 class PhotoFragment : Fragment(), IOnBackPressed {
     // TODO: Rename and change types of parameters
@@ -98,5 +97,13 @@ class PhotoFragment : Fragment(), IOnBackPressed {
     override fun onBackPressed(): Boolean {
         binding!!.root.findNavController().navigate(R.id.action_photoFragment_to_mainFragment)
         return true
+    }
+
+    fun onClickNext() {
+        if(this.paper.hasLine()) {
+            val str = photoStore.imageUri.toString() ?: ""
+            var bundle = bundleOf("url" to str)
+            binding!!.root.findNavController().navigate(R.id.action_photoFragment_to_detailFragment, bundle)
+        }
     }
 }

@@ -23,19 +23,19 @@
                 android:id="@+id/photo_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
-<!--
-            <ImageView
-                android:id="@+id/lineView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-                -->
-
-            <com.ctyeung.treerings.MyPaperView
-                android:id="@+id/paper"
-                android:layout_height="match_parent"
-                android:layout_width="match_parent"/>
 
         </RelativeLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            app:fabSize="normal"
+            android:layout_gravity="bottom|right"
+            android:src="@drawable/ic_navigate_next_24px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            app:backgroundTint="#8888FF"
+            android:id="@+id/btnNext"
+            android:onClick="@{()->layout.onClickNext()}"/>
 
     </FrameLayout>
 

@@ -14,20 +14,20 @@ class MyPaperView :View {
 
     }
 
-    val regressionColor = Color.BLACK
-    val dotColor = Color.BLUE
-    val tangentColor = Color.GREEN
-
     // defines paint and canvas
-    var drawPaint: Paint? = null
-    var path: Path? = null
     var listPoints = ArrayList<PointF>()
 
     init {
         isFocusable = true
         isFocusableInTouchMode = true
-        path = Path()
         listPoints = ArrayList()
+    }
+
+    fun hasLine():Boolean {
+        if(listPoints.size >= 2)
+            return true
+
+        return false
     }
 
     override fun onDraw(canvas: Canvas) {
@@ -40,7 +40,6 @@ class MyPaperView :View {
 
     fun clear() {
         listPoints.clear()
-        path = Path()
         invalidate() // Indicate view should be redrawn
     }
 
