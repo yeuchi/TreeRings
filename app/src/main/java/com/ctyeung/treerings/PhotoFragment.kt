@@ -20,16 +20,16 @@ private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
 /**
- * TODO: Add tutorial dialog
+ * TODO:
+ * 1. Add tutorial dialog
+ * 2. Add a zoom / pan
  */
 class PhotoFragment : Fragment(), IOnBackPressed {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-    private var points = ArrayList<PointF>()
     private lateinit var binding: FragmentPhotoBinding
     private lateinit var photoStore: PhotoStorage
-    private var canvas: Canvas? = null
     private lateinit var paper: MyPaperView
 
     override fun onCreate(savedInstanceState: Bundle?) {
