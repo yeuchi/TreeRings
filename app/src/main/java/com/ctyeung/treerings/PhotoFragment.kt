@@ -24,13 +24,11 @@ private const val ARG_PARAM2 = "param2"
  * 1. Add tutorial dialog
  * 2. Add a zoom / pan
  */
-class PhotoFragment : Fragment(), IOnBackPressed {
+class PhotoFragment : BaseFragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
     private lateinit var binding: FragmentPhotoBinding
-    private lateinit var photoStore: PhotoStorage
-    private lateinit var paper: MyPaperView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,7 +36,6 @@ class PhotoFragment : Fragment(), IOnBackPressed {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-        photoStore = PhotoStorage(this.requireActivity().applicationContext)
     }
 
     override fun onCreateView(
@@ -53,25 +50,12 @@ class PhotoFragment : Fragment(), IOnBackPressed {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (activity as MainActivity).enableBackButton(true)
         (activity as MainActivity).setTittle("Draw Line")
-        this.paper = MyPaperView(this.requireContext())
         binding!!.layout!!.line_container!!.addView(this.paper)
 
-        val uriString = arguments?.getString("url")
-        if (uriString != null) {
-            val photoUri: Uri? = Uri.parse(uriString)
-            loadPhoto(photoUri)
+        if(photoUri != null) {
+            loadPhoto(binding!!.layout!!.photo_view, photoUri)
         }
-    }
-
-    private fun loadPhoto(photoUri: Uri?) {
-        if (photoUri != null)
-            photoStore.read(
-                requireActivity().contentResolver,
-                photoUri,
-                binding!!.layout!!.photo_view
-            )
     }
 
     companion object {

@@ -16,16 +16,18 @@ import kotlinx.android.synthetic.main.fragment_photo.*
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [DetailFragment.newInstance] factory method to
- * create an instance of this fragment.
+/*
+ * Perform image processing and count on this page
+ * 1. start with a magnified section.
+ * 2. perform the image processing -- allow user to adjust sensitivity.
+ * 3. user selects and count !
  */
-class DetailFragment : Fragment(), IOnBackPressed {
+class DetailFragment : BaseFragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
     private lateinit var binding:FragmentDetailBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,9 +49,12 @@ class DetailFragment : Fragment(), IOnBackPressed {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (activity as MainActivity).enableBackButton(true)
         (activity as MainActivity).setTittle("Count Rings")
+        binding!!.layout!!.line_container!!.addView(this.paper)
 
+        if(photoUri != null) {
+            loadPhoto(binding!!.layout!!.photo_view, photoUri)
+        }
     }
 
     companion object {
