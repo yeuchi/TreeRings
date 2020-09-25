@@ -44,5 +44,8 @@ Android mobile for counting tree rings.
 4. Codepath: Accessing the Camera and Stored Media \
 https://guides.codepath.com/android/Accessing-the-Camera-and-Stored-Media
 
-5. Custom View in Android with Kotlin by Antonio Leiva  
+5. Custom View in Android with Kotlin by Antonio Leiva  \
 https://antonioleiva.com/custom-views-android-kotlin/
+
+6. Android NDK: Interaction of Kotlin and C/C++ by Ihor Kucherenko, Jun 29, 2017 \
+https://proandroiddev.com/android-ndk-interaction-of-kotlin-and-c-c-5e19e35bac74
