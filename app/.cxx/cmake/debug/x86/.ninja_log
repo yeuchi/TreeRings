@@ -1,0 +1,15 @@
+# ninja log v5
+0	6	0	clean	e5725e59067cfa2f
+0	5	0	clean	e5725e59067cfa2f
+0	17	0	clean	e5725e59067cfa2f
+1	36	1601142377	build.ninja	5b5ba157056df69a
+0	6	0	clean	e5725e59067cfa2f
+0	36	1601142556	build.ninja	5b5ba157056df69a
+0	10	0	clean	e5725e59067cfa2f
+0	39	1601142677	build.ninja	5b5ba157056df69a
+0	9	0	clean	e5725e59067cfa2f
+0	33	1601142724	build.ninja	5b5ba157056df69a
+1	6	0	clean	e5725e59067cfa2f
+0	80	1601142733	CMakeFiles/native-lib.dir/Convolution.cpp.o	e2a048428de1eda
+0	577	1601142733	CMakeFiles/native-lib.dir/native-lib.cpp.o	5c56f053da0b8c0d
+577	647	1601142733	/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/build/intermediates/cmake/debug/obj/x86/libnative-lib.so	56856a4d0e5a51a3

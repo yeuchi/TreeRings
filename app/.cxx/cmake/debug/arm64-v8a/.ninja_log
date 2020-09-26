@@ -1,0 +1,23 @@
+# ninja log v5
+0	5	0	clean	e5725e59067cfa2f
+0	35	1601139934	build.ninja	10e13990b0fe7491
+0	6	0	clean	e5725e59067cfa2f
+0	33	1601140073	build.ninja	10e13990b0fe7491
+0	6	0	clean	e5725e59067cfa2f
+0	5	0	clean	e5725e59067cfa2f
+0	9	0	clean	e5725e59067cfa2f
+0	35	1601142377	build.ninja	10e13990b0fe7491
+0	6	0	clean	e5725e59067cfa2f
+0	40	1601142556	build.ninja	10e13990b0fe7491
+0	6	0	clean	e5725e59067cfa2f
+0	33	1601142677	build.ninja	10e13990b0fe7491
+0	6	0	clean	e5725e59067cfa2f
+0	36	1601142724	build.ninja	10e13990b0fe7491
+0	6	0	clean	e5725e59067cfa2f
+0	72	1601142732	CMakeFiles/native-lib.dir/Convolution.cpp.o	3e85f6af949a1764
+1	586	1601142733	CMakeFiles/native-lib.dir/native-lib.cpp.o	cf28c7bf9c79a9a3
+587	704	1601142733	/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	afd032f0a1f1fa05
+1	40	1601142823	build.ninja	10e13990b0fe7491
+3	148	1601143144	CMakeFiles/native-lib.dir/Convolution.cpp.o	3e85f6af949a1764
+4	732	1601143144	CMakeFiles/native-lib.dir/native-lib.cpp.o	cf28c7bf9c79a9a3
+732	904	1601143145	/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	afd032f0a1f1fa05
