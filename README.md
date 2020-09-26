@@ -30,6 +30,28 @@ Render highlight on each ring crossing for inspection. \
 Render count result
 1. Adjust sensitivity.
 
+
+### Configuration ../src/CMakeList.txt
+Below addition is <bold>CRITICAL</bold> to JNI referencing to C++ classes.
+
+add_library( # Sets the name of the library.
+        native-lib
+
+        # Sets the library as a shared library.
+        SHARED
+
+        # Provides a relative path to your source file(s).
+```diff
++       Convolution.cpp
+```
+        native-lib.cpp)
+
+target_link_libraries( # Specifies the target library.
+```diff
+        native-lib
++       -ljnigraphics
+```
+
 # References
 1. Android10CameraBasics - C.T. Yeung \
 https://github.com/yeuchi/Android10CameraBasic
@@ -47,5 +69,3 @@ https://guides.codepath.com/android/Accessing-the-Camera-and-Stored-Media
 5. Custom View in Android with Kotlin by Antonio Leiva  \
 https://antonioleiva.com/custom-views-android-kotlin/
 
-6. Android NDK: Interaction of Kotlin and C/C++ by Ihor Kucherenko, Jun 29, 2017 \
-https://proandroiddev.com/android-ndk-interaction-of-kotlin-and-c-c-5e19e35bac74
