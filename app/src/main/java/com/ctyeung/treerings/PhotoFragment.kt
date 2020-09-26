@@ -89,6 +89,7 @@ class PhotoFragment : BaseFragment() {
             val str = photoStore.imageUri.toString() ?: ""
             var bundle = bundleOf("url" to str)
             binding!!.root.findNavController().navigate(R.id.action_photoFragment_to_detailFragment, bundle)
+            return
         }
         Toast.makeText(this.context,"Draw a cross section line first", Toast.LENGTH_LONG).show()
     }
