@@ -55,27 +55,16 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun applyKernel(bmpIn:Bitmap, bmpOut:Bitmap, imageView:ImageView) {
-        /*
-         * Create appropriate kernel pending on line angle
-         */
-        val kernel = KernelFactory.horizontalDerivative()
-        runJNICode(kernel, bmpIn, bmpOut, imageView)
-    }
-
     /*
      * https://stackoverflow.com/questions/4939266/android-bitmap-native-code-linking-problem
      * need to set option in CMakeLists.txt
      */
-    private fun runJNICode(kernel:Kernel, bmpIn:Bitmap, bmpOut:Bitmap, imageView:ImageView) {
+    fun convolve(kernel:Kernel, bmpIn:Bitmap, bmpOut:Bitmap) {
         try {
 //            val bmpIn: Bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.white_lion_small)
 //            val bmpOut: Bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.white_lion_small_gray)
             imageConvolveFromJNI(bmpIn, bmpOut, kernel.mValues, kernel.mWidth)
 
-            // insert processed image
-            //val imageView: ImageView = this.findViewById(R.id.image_proccessed)
-            if (null != imageView) imageView.setImageBitmap(bmpOut)
         } catch (ex: java.lang.Exception) {
             Toast.makeText(this,
                     ex.toString() as String,

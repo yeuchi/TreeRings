@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -89,5 +90,6 @@ class PhotoFragment : BaseFragment() {
             var bundle = bundleOf("url" to str)
             binding!!.root.findNavController().navigate(R.id.action_photoFragment_to_detailFragment, bundle)
         }
+        Toast.makeText(this.context,"Draw a cross section line first", Toast.LENGTH_LONG).show()
     }
 }

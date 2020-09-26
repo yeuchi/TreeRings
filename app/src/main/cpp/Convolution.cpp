@@ -87,14 +87,20 @@ bool Convolution::Convolve(AndroidBitmapInfo infoSource,
                     for(cx=0-pad; cx<=pad; cx++)
                     {
                         int i = x+cx;
-                        int kernelValue = mKernel[ki++];
-                        integralR += line[i].red * kernelValue;
-                        integralG += line[i].green * kernelValue;
-                        integralB += line[i].blue * kernelValue;
+                        double kernelValue = mKernel[ki++];
+                        integralR += double(line[i].red) * kernelValue;
+                        integralG += double(line[i].green) * kernelValue;
+                        integralB += double(line[i].blue) * kernelValue;
                     }
                 }
 
                 destline[x].alpha = 255;   // alpha channel
+                // debugging
+//                int num = bound(integralB / mDenominator);
+//                destline[x].red = num; // red
+//                destline[x].green = num;   // green
+//                destline[x].blue = num;  // blue
+
                 destline[x].red = bound(integralR / mDenominator); // red
                 destline[x].green = bound(integralG / mDenominator);   // green
                 destline[x].blue = bound(integralB / mDenominator);  // blue
@@ -120,7 +126,7 @@ int Convolution::bound(double value)
         return 255;
 
     if (value < 0)
-        return 255;
+        return 0;
 
     return value;
 }

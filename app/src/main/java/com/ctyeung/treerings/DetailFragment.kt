@@ -53,7 +53,16 @@ class DetailFragment : BaseFragment() {
         binding!!.layout!!.line_container!!.addView(this.paper)
 
         if(photoUri != null) {
-            loadPhoto(binding!!.layout!!.photo_view, photoUri)
+            val bmpIn = photoStore.load(requireActivity().contentResolver, photoUri!!)
+            if(bmpIn != null) {
+                var bmpOut = BitmapUtils.create(bmpIn)
+                val kernel = KernelFactory.isotropicDerivative()
+
+                (this.activity as MainActivity).convolve(kernel, bmpIn, bmpOut)
+                val imageView = binding!!.layout!!.photo_view
+                imageView.setImageBitmap(bmpOut)
+            }
+
         }
     }
 

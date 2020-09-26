@@ -102,7 +102,9 @@ class MainFragment : Fragment() {
             val str = photoStore.imageUri.toString() ?: ""
             var bundle = bundleOf("url" to str)
             binding!!.root.findNavController().navigate(R.id.action_mainFragment_to_photoFragment, bundle)
+            return
         }
+        Toast.makeText(this.context, "Select photo first", Toast.LENGTH_LONG).show()
     }
 
     override fun onActivityResult(requestCode: Int,
@@ -126,9 +128,15 @@ class MainFragment : Fragment() {
 
     fun handleLoadPhoto(data: Intent?){
         val photoUri:Uri = data?.data!!;
-        if(photoUri != null)
-            photoStore.read(requireActivity().contentResolver, photoUri, binding!!.layout!!.photo_preview)
-
+        if(photoUri != null) {
+            photoStore.read(
+                requireActivity().contentResolver,
+                photoUri,
+                binding!!.layout!!.photo_preview
+            )
+            return
+        }
+        Toast.makeText(this.context, "photoUri is null", Toast.LENGTH_LONG).show()
     }
 
     fun handleTakePhoto(data: Intent?) {
@@ -144,6 +152,8 @@ class MainFragment : Fragment() {
 
             if(returned != "")
                 Toast.makeText(this.context, returned, Toast.LENGTH_LONG).show()
+            return
         }
+        Toast.makeText(this.context, "data is null", Toast.LENGTH_LONG).show()
     }
 }

@@ -13,4 +13,9 @@ object BitmapUtils {
         }
         return bmp
     }
+
+    fun create(bmp:Bitmap):Bitmap {
+        val matrix = Matrix()
+        return Bitmap.createBitmap(bmp, 0,0, bmp.width, bmp.height, matrix, true)
+    }
 }

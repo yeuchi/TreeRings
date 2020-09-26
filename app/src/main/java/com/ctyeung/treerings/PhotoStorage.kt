@@ -88,6 +88,21 @@ class PhotoStorage(val context:Context) {
         }
     }
 
+    fun load(contentResolver: ContentResolver,uri:Uri):Bitmap? {
+        try {
+            bmp = MediaStore.Images.Media.getBitmap(contentResolver, uri)
+            if(bmp == null)
+                throw java.lang.Exception()
+
+            bmp = BitmapUtils.setPortrait(bmp!!)
+            imageUri = uri
+            return bmp
+        }
+        catch (ex:java.lang.Exception) {
+            return null
+        }
+    }
+
     /*
      * 1st time save or over-write
      */
