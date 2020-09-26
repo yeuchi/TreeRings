@@ -3,6 +3,25 @@ package com.ctyeung.treerings;
 import com.ctyeung.treerings.Kernel;
 
 public class KernelFactory {
+    public static Kernel XYDerivative()
+    {
+        int kernelWidth = 3;
+        int[] kernel = new int[kernelWidth*kernelWidth];
+        kernel[0] = 0;
+        kernel[1] = 0;
+        kernel[2] = 0;
+
+        kernel[3] = 0;
+        kernel[4] = 2;
+        kernel[5] = -1;
+
+        kernel[6] = 0;
+        kernel[7] = -1;
+        kernel[8] = 0;
+
+        return new Kernel(kernelWidth, kernel, Kernel.TYPE_HOR_DERIVATIVE);
+    }
+
     public static Kernel horizontalDerivative()
     {
         int kernelWidth = 3;
