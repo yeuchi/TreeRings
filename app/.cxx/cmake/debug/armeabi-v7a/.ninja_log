@@ -33,3 +33,7 @@
 1	87	1601147327	CMakeFiles/native-lib.dir/Convolution.cpp.o	d2af2e708cccdbae
 1	649	1601147328	CMakeFiles/native-lib.dir/native-lib.cpp.o	d75ed53d9984c4c8
 649	694	1601147328	/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	b8db89cfbc42e5bc
+0	9	0	clean	e5725e59067cfa2f
+4	167	1601161020	CMakeFiles/native-lib.dir/Convolution.cpp.o	d2af2e708cccdbae
+4	753	1601161020	CMakeFiles/native-lib.dir/native-lib.cpp.o	d75ed53d9984c4c8
+753	835	1601161021	/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	b8db89cfbc42e5bc

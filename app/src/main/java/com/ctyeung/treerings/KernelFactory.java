@@ -12,10 +12,10 @@ public class KernelFactory {
         kernel[2] = 0;
 
         kernel[3] = 0;
-        kernel[4] = 2;
+        kernel[4] = 3;
         kernel[5] = -1;
 
-        kernel[6] = 0;
+        kernel[6] = -1;
         kernel[7] = -1;
         kernel[8] = 0;
 

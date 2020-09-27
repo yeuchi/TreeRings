@@ -42,7 +42,7 @@ bool Convolution::LoadKernel(jint *kernel,
     if(NULL==mKernel)
             return false;
 
-    FindKernelDenominator();
+    findKernelDenominator();
     return true;
 }
 
@@ -77,6 +77,8 @@ bool Convolution::Convolve(AndroidBitmapInfo infoSource,
                 double integralG = 0;
                 double integralB = 0;
 
+                int srcR, srcG, srcB;
+
                 // perform convolution with kernel
                 int ki = 0;
                 for(cy=0-pad; cy<=pad; cy++)
@@ -91,19 +93,39 @@ bool Convolution::Convolve(AndroidBitmapInfo infoSource,
                         integralR += double(line[i].red) * kernelValue;
                         integralG += double(line[i].green) * kernelValue;
                         integralB += double(line[i].blue) * kernelValue;
+
+                        if(cy==0 && cx==0){
+                            srcR = line[i].red;
+                            srcG = line[i].green;
+                            srcB = line[i].blue;
+                        }
                     }
                 }
 
-                destline[x].alpha = 255;   // alpha channel
-                // debugging
-//                int num = bound(integralB / mDenominator);
-//                destline[x].red = num; // red
-//                destline[x].green = num;   // green
-//                destline[x].blue = num;  // blue
+                // peak value regardless of color channel
+                double max = findMax(integralR / mDenominator,integralG / mDenominator,integralB / mDenominator);
+                int num = bound(max);
 
-                destline[x].red = bound(integralR / mDenominator); // red
-                destline[x].green = bound(integralG / mDenominator);   // green
-                destline[x].blue = bound(integralB / mDenominator);  // blue
+                // threshold
+                if( num > 40){
+                    // highlight color
+                    destline[x].alpha = 255;
+                    destline[x].red = 0; // red
+                    destline[x].green = 255;   // green
+                    destline[x].blue = 255;  // blue
+                }
+                else {
+                    // original pixels
+                    destline[x].alpha = 255;
+                    destline[x].red = srcR; // red
+                    destline[x].green = srcG;   // green
+                    destline[x].blue = srcB;  // blue
+                }
+
+                // standard convolution
+//                destline[x].red = bound(integralR / mDenominator); // red
+//                destline[x].green = bound(integralG / mDenominator);   // green
+//                destline[x].blue = bound(integralB / mDenominator);  // blue
             }
 
             pixelsConvolved = (char *) pixelsConvolved + infoConvolved.stride;
@@ -120,6 +142,17 @@ bool Convolution::Convolve(AndroidBitmapInfo infoSource,
 //////////////////////////////////////////////////////////////////
 // Protected / Private methods
 
+int Convolution::findMax(double r, double g, double b) {
+    double max = r;
+    if (g > max) {
+        max = g;
+    }
+    if (b > max) {
+        max = b;
+    }
+    return max;
+}
+
 int Convolution::bound(double value)
 {
     if (value > 255)
@@ -131,7 +164,7 @@ int Convolution::bound(double value)
     return value;
 }
 
-void Convolution::FindKernelDenominator()
+void Convolution::findKernelDenominator()
 {
     mDenominator = 0;
     for(int k=0; k<mKernelWidth*mKernelWidth; k++)

@@ -9,7 +9,10 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.ctyeung.treerings.databinding.FragmentDetailBinding
+import kotlinx.android.synthetic.main.fragment_detail.*
 import kotlinx.android.synthetic.main.fragment_photo.*
+import kotlinx.android.synthetic.main.fragment_photo.line_container
+import kotlinx.android.synthetic.main.fragment_photo.photo_view
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -55,12 +58,13 @@ class DetailFragment : BaseFragment() {
         if(photoUri != null) {
             val bmpIn = photoStore.load(requireActivity().contentResolver, photoUri!!)
             if(bmpIn != null) {
+
                 var bmpOut = BitmapUtils.create(bmpIn)
                 val kernel = KernelFactory.XYDerivative()
 
                 (this.activity as MainActivity).convolve(kernel, bmpIn, bmpOut)
-                val imageView = binding!!.layout!!.photo_view
-                imageView.setImageBitmap(bmpOut)
+                val photoEdges = binding!!.layout!!.photo_view
+                photoEdges.setImageBitmap(bmpOut)
             }
 
         }

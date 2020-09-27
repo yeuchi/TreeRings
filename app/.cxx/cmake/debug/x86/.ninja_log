@@ -25,3 +25,7 @@
 1	63	1601147328	CMakeFiles/native-lib.dir/Convolution.cpp.o	e2a048428de1eda
 2	586	1601147329	CMakeFiles/native-lib.dir/native-lib.cpp.o	5c56f053da0b8c0d
 586	630	1601147329	/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/build/intermediates/cmake/debug/obj/x86/libnative-lib.so	56856a4d0e5a51a3
+0	5	0	clean	e5725e59067cfa2f
+2	71	1601161021	CMakeFiles/native-lib.dir/Convolution.cpp.o	e2a048428de1eda
+2	576	1601161022	CMakeFiles/native-lib.dir/native-lib.cpp.o	5c56f053da0b8c0d
+576	649	1601161022	/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/build/intermediates/cmake/debug/obj/x86/libnative-lib.so	56856a4d0e5a51a3

@@ -24,14 +24,15 @@ public:
                   void* pixelsConvolved);
 
 protected:
-    void FindKernelDenominator();
+    void findKernelDenominator();
     int bound(double value);
+    int findMax(double r, double g, double b);
 
 private:
 
     jint * mKernel;
     int mKernelWidth;
-    int mDenominator;
+    double mDenominator;
 };
 
 #endif //TREERINGS_CONVOLUTION_H

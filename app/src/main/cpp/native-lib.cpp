@@ -143,10 +143,10 @@ void Convolve(JNIEnv *env,
  */
 extern "C" JNIEXPORT void JNICALL
 Java_com_ctyeung_treerings_MainActivity_imageConvolveFromJNI(JNIEnv * env,
-                                                            jobject obj,
-                                                            jobject bmp_in,
-                                                            jobject bmp_out,
-                                                            jintArray kernel,
-                                                            jint kernel_width) {
+                                jobject obj,
+                                jobject bmp_in,
+                                jobject bmp_out,
+                                jintArray kernel,
+                                jint kernel_width) {
     Convolve(env, obj, bmp_in, bmp_out, kernel, kernel_width);
 }
