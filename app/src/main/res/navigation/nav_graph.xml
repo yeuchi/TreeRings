@@ -31,4 +31,9 @@
         android:name="com.ctyeung.treerings.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail" />
+    <fragment
+        android:id="@+id/configFragment"
+        android:name="com.ctyeung.treerings.ConfigFragment"
+        android:label="fragment_config"
+        tools:layout="@layout/fragment_config" />
 </navigation>

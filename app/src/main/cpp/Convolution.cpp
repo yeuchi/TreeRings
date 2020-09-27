@@ -52,7 +52,8 @@ bool Convolution::LoadKernel(jint *kernel,
 bool Convolution::Convolve(AndroidBitmapInfo infoSource,
                            void* pixelsSource,
                            AndroidBitmapInfo infoConvolved,
-                           void* pixelsConvolved)
+                           void* pixelsConvolved,
+                           int threshold)
 {
     int y, cy;
     int x, cx;
@@ -84,20 +85,20 @@ bool Convolution::Convolve(AndroidBitmapInfo infoSource,
                 for(cy=0-pad; cy<=pad; cy++)
                 {
                     currentPixelsSource = (char *)pixelsSource + (infoSource.stride * (y+cy));
-                    rgba * line = (rgba *) currentPixelsSource;
+                    rgba * srcline = (rgba *) currentPixelsSource;
 
                     for(cx=0-pad; cx<=pad; cx++)
                     {
                         int i = x+cx;
                         double kernelValue = mKernel[ki++];
-                        integralR += double(line[i].red) * kernelValue;
-                        integralG += double(line[i].green) * kernelValue;
-                        integralB += double(line[i].blue) * kernelValue;
+                        integralR += double(srcline[i].red) * kernelValue;
+                        integralG += double(srcline[i].green) * kernelValue;
+                        integralB += double(srcline[i].blue) * kernelValue;
 
                         if(cy==0 && cx==0){
-                            srcR = line[i].red;
-                            srcG = line[i].green;
-                            srcB = line[i].blue;
+                            srcR = srcline[i].red;
+                            srcG = srcline[i].green;
+                            srcB = srcline[i].blue;
                         }
                     }
                 }
@@ -107,7 +108,7 @@ bool Convolution::Convolve(AndroidBitmapInfo infoSource,
                 int num = bound(max);
 
                 // threshold
-                if( num > 40){
+                if( num > threshold){
                     // highlight color
                     destline[x].alpha = 255;
                     destline[x].red = 0; // red

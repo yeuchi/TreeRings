@@ -21,7 +21,8 @@ public:
     bool Convolve(AndroidBitmapInfo infoSource,
                   void* pixelsSource,
                   AndroidBitmapInfo infoConvolved,
-                  void* pixelsConvolved);
+                  void* pixelsConvolved,
+                  int threshold);
 
 protected:
     void findKernelDenominator();

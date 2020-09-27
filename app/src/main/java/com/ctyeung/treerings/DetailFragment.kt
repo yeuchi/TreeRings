@@ -52,21 +52,11 @@ class DetailFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (activity as MainActivity).setTittle("Count Rings")
+        (activity as MainActivity).setTittle("Draw Line")
         binding!!.layout!!.line_container!!.addView(this.paper)
 
         if(photoUri != null) {
-            val bmpIn = photoStore.load(requireActivity().contentResolver, photoUri!!)
-            if(bmpIn != null) {
-
-                var bmpOut = BitmapUtils.create(bmpIn)
-                val kernel = KernelFactory.XYDerivative()
-
-                (this.activity as MainActivity).convolve(kernel, bmpIn, bmpOut)
-                val photoEdges = binding!!.layout!!.photo_view
-                photoEdges.setImageBitmap(bmpOut)
-            }
-
+            loadPhoto(binding!!.layout!!.photo_view, photoUri)
         }
     }
 

@@ -112,7 +112,8 @@ void Convolve(JNIEnv *env,
                  jobject bitmapsource,
                  jobject bitmapconvolved,
                  jintArray arr,
-                 jint kernelWidth)
+                 jint kernelWidth,
+                 jint threshold)
 {
     // initializations, declarations, etc
     jint *c_array;
@@ -129,7 +130,7 @@ void Convolve(JNIEnv *env,
 
     Convolution convolution;
     convolution.LoadKernel(&c_array[0], kernelWidth);
-    convolution.Convolve(infoSource, pixelsSource, infoDestination, pixelsDestination);
+    convolution.Convolve(infoSource, pixelsSource, infoDestination, pixelsDestination, threshold);
 
     releaseBitmaps(env, bitmapsource, bitmapconvolved);
     LOGI("unlocking pixels");
@@ -147,6 +148,7 @@ Java_com_ctyeung_treerings_MainActivity_imageConvolveFromJNI(JNIEnv * env,
                                 jobject bmp_in,
                                 jobject bmp_out,
                                 jintArray kernel,
-                                jint kernel_width) {
-    Convolve(env, obj, bmp_in, bmp_out, kernel, kernel_width);
+                                jint kernel_width,
+                                jint threshold) {
+    Convolve(env, obj, bmp_in, bmp_out, kernel, kernel_width, threshold);
 }

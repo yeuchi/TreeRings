@@ -59,11 +59,11 @@ class MainActivity : AppCompatActivity() {
      * https://stackoverflow.com/questions/4939266/android-bitmap-native-code-linking-problem
      * need to set option in CMakeLists.txt
      */
-    fun convolve(kernel:Kernel, bmpIn:Bitmap, bmpOut:Bitmap) {
+    fun convolve(kernel:Kernel, bmpIn:Bitmap, bmpOut:Bitmap, threshold:Int) {
         try {
 //            val bmpIn: Bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.white_lion_small)
 //            val bmpOut: Bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.white_lion_small_gray)
-            imageConvolveFromJNI(bmpIn, bmpOut, kernel.mValues, kernel.mWidth)
+            imageConvolveFromJNI(bmpIn, bmpOut, kernel.mValues, kernel.mWidth, threshold)
 
         } catch (ex: java.lang.Exception) {
             Toast.makeText(this,
@@ -71,6 +71,6 @@ class MainActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG).show()
         }
     }
-    external fun imageConvolveFromJNI(bmpIn: Bitmap?, BmpOut: Bitmap?, kernel: IntArray?, kernelWidth: Int)
+    external fun imageConvolveFromJNI(bmpIn: Bitmap?, BmpOut: Bitmap?, kernel: IntArray?, kernelWidth: Int, threshold: Int)
 
 }

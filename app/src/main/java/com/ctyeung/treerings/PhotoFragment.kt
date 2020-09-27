@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SeekBar
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
@@ -48,15 +49,63 @@ class PhotoFragment : BaseFragment() {
         return binding!!.root;
     }
 
+    protected var bmpIn:Bitmap? = null
+    protected var bmpOut:Bitmap? = null
+    protected var kernel:Kernel? = null
+    protected var thresholdValue:Int = 30
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        (activity as MainActivity).setTittle("Draw Line")
+        (activity as MainActivity).setTittle("Processing")
         binding!!.layout!!.line_container!!.addView(this.paper)
 
         if(photoUri != null) {
-            loadPhoto(binding!!.layout!!.photo_view, photoUri)
+            bmpIn = photoStore.load(requireActivity().contentResolver, photoUri!!)
+            if(bmpIn != null) {
+                this.kernel = KernelFactory.verticalDerivative()
+                this.bmpOut = BitmapUtils.create(bmpIn!!)
+                val photoEdges = binding!!.layout!!.photo_view
+                photoEdges.setImageBitmap(bmpOut)
+                detectEdges(thresholdValue)
+            }
         }
+        handleSeekBar()
+    }
+
+    /*
+     * TODO - There is a bug in my bmp indexing.
+     *  If I don't reload bmpIn, bmpOut is rendered incorrectly..
+     * Looks like I am writing over bmpIn somehow.
+     */
+    fun detectEdges(thresholdValue:Int){
+        if(this.kernel!=null && this.bmpIn!=null ) {
+            bmpIn = photoStore.load(requireActivity().contentResolver, photoUri!!)
+            //val bitmap = Bitmap.createScaledBitmap(bmpIn!!, bmpIn!!.width, bmpIn!!.height, false)
+            (this.activity as MainActivity).convolve(this.kernel!!, bmpIn!!, this.bmpOut!!, thresholdValue)
+            return
+        }
+        Toast.makeText(this.context, "Can't detect edges", Toast.LENGTH_LONG).show()
+    }
+
+    fun handleSeekBar() {
+        val seek = binding!!.layout!!.seekbar
+        seek?.progress = this.thresholdValue
+        seek?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+
+            override fun onProgressChanged(seek: SeekBar,
+                                           progress: Int,
+                                           fromUser: Boolean) {
+                thresholdValue = seek.progress
+                detectEdges(thresholdValue)
+            }
+
+            override fun onStartTrackingTouch(seek: SeekBar) {
+            }
+
+            override fun onStopTrackingTouch(seek: SeekBar) {
+            }
+        })
     }
 
     companion object {
@@ -85,12 +134,11 @@ class PhotoFragment : BaseFragment() {
     }
 
     fun onClickNext() {
-        if(this.paper.hasLine()) {
-            val str = photoStore.imageUri.toString() ?: ""
-            var bundle = bundleOf("url" to str)
-            binding!!.root.findNavController().navigate(R.id.action_photoFragment_to_detailFragment, bundle)
-            return
-        }
-        Toast.makeText(this.context,"Draw a cross section line first", Toast.LENGTH_LONG).show()
+        /*
+         * same processed image and pass for next stage.
+         */
+        val str = photoStore.imageUri.toString() ?: ""
+        var bundle = bundleOf("url" to str)
+        binding!!.root.findNavController().navigate(R.id.action_photoFragment_to_detailFragment, bundle)
     }
 }
