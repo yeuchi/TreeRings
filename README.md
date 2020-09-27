@@ -40,8 +40,9 @@ Render count result
 1. Adjust sensitivity.
 
 
-### Configuration ../src/CMakeList.txt
-Below addition is <bold>CRITICAL</bold> to JNI referencing to C++ classes.
+### JNI Configuration 
+Below addition is <bold>CRITICAL</bold> to JNI referencing to C++ classes. \
+Please consider the file,  ../src/CMakeList.txt \
 
 add_library( # Sets the name of the library.
         native-lib
