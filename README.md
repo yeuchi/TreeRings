@@ -16,7 +16,7 @@ Select and preview your tree ring image.
 <img width="300" alt="starter" src="https://user-images.githubusercontent.com/1282659/93726809-a5d67300-fb7d-11ea-842c-7065f897f563.png"> <img width="220" src="https://user-images.githubusercontent.com/1282659/93726815-abcc5400-fb7d-11ea-8415-56c07d7b719d.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/93726816-af5fdb00-fb7d-11ea-9c59-629c2936bcf7.jpg"> 
 
 ### Image processing 
-User should select the appropriate threshold value to maximize best edge detection. \
+User should select the best threshold value from slider for best edge detection. \
 Default value = 30 in range 0 - 255. 
 
 The image process steps are convolution -> threshold -> merge (source + highlighted edges). \
