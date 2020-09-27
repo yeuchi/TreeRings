@@ -17,7 +17,7 @@ Select and preview your tree ring image.
 
 ### Image processing 
 User should select the appropriate threshold value to maximize best edge detection. \
-Default value = 30 in range 0 - 255. \
+Default value = 30 in range 0 - 255. 
 
 The image process steps are convolution -> threshold -> merge (source + highlighted edges). \
 Convolution with 1st derivative sobel operators on x, y, 45 degree axis. \
