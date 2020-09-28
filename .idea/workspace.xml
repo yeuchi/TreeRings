@@ -14,8 +14,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="580abc08-65ff-46ad-b8d7-da4260ef9ebf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/ConfigFragment.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -26,45 +24,14 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/arm64-v8a/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/arm64-v8a/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/arm64-v8a/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/arm64-v8a/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/arm64-v8a/CMakeFiles/native-lib.dir/Convolution.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/arm64-v8a/CMakeFiles/native-lib.dir/Convolution.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/arm64-v8a/CMakeFiles/native-lib.dir/native-lib.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/arm64-v8a/CMakeFiles/native-lib.dir/native-lib.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/arm64-v8a/android_gradle_build_native-lib_arm64-v8a.stdout.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/arm64-v8a/android_gradle_build_native-lib_arm64-v8a.stdout.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/armeabi-v7a/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/armeabi-v7a/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/armeabi-v7a/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/armeabi-v7a/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/native-lib.dir/Convolution.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/native-lib.dir/Convolution.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/native-lib.dir/native-lib.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/native-lib.dir/native-lib.cpp.o" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/CMakeFiles/native-lib.dir/Convolution.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/CMakeFiles/native-lib.dir/Convolution.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/CMakeFiles/native-lib.dir/native-lib.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/CMakeFiles/native-lib.dir/native-lib.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/build_output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/build_output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/cmake_server_log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/cmake_server_log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86_64/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86_64/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86_64/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86_64/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86_64/CMakeFiles/native-lib.dir/Convolution.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86_64/CMakeFiles/native-lib.dir/Convolution.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86_64/CMakeFiles/native-lib.dir/native-lib.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86_64/CMakeFiles/native-lib.dir/native-lib.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/release/arm64-v8a/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/release/arm64-v8a/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/release/armeabi-v7a/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/release/armeabi-v7a/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/release/x86/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/release/x86/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/release/x86_64/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/release/x86_64/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/cpp/Convolution.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/cpp/Convolution.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/cpp/Convolution.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/cpp/Convolution.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/cpp/native-lib.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/cpp/native-lib.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/DetailFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/DetailFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/android_gradle_build_native-lib_x86.stdout.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/android_gradle_build_native-lib_x86.stdout.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/build_model.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/build_model.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/PhotoFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/PhotoFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_photo.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_photo.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/navigation/nav_graph.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,6 +70,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="344c5a4832333098" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2020-09-28T00:39:51.141Z" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
@@ -195,53 +164,53 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="465" y="211" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1600647807346" />
-    <state width="1356" height="300" key="GridCell.Tab.0.bottom" timestamp="1601225102374">
+    <state width="1356" height="184" key="GridCell.Tab.0.bottom" timestamp="1601253602418">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.0.bottom/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215066185" />
-    <state width="1356" height="300" key="GridCell.Tab.0.bottom/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1601225102374" />
+    <state width="1356" height="184" key="GridCell.Tab.0.bottom/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1601253602418" />
     <state width="1356" height="219" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1601221464252" />
-    <state width="1356" height="300" key="GridCell.Tab.0.center" timestamp="1601225102373">
+    <state width="1356" height="184" key="GridCell.Tab.0.center" timestamp="1601253602417">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.0.center/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215066185" />
-    <state width="1356" height="300" key="GridCell.Tab.0.center/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1601225102373" />
+    <state width="1356" height="184" key="GridCell.Tab.0.center/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1601253602417" />
     <state width="1356" height="219" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1601221464251" />
-    <state width="1356" height="300" key="GridCell.Tab.0.left" timestamp="1601225102372">
+    <state width="1356" height="184" key="GridCell.Tab.0.left" timestamp="1601253602417">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.0.left/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215066184" />
-    <state width="1356" height="300" key="GridCell.Tab.0.left/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1601225102372" />
+    <state width="1356" height="184" key="GridCell.Tab.0.left/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1601253602417" />
     <state width="1356" height="219" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1601221464251" />
-    <state width="1356" height="300" key="GridCell.Tab.0.right" timestamp="1601225102373">
+    <state width="1356" height="184" key="GridCell.Tab.0.right" timestamp="1601253602417">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.0.right/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215066185" />
-    <state width="1356" height="300" key="GridCell.Tab.0.right/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1601225102373" />
+    <state width="1356" height="184" key="GridCell.Tab.0.right/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1601253602417" />
     <state width="1356" height="219" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1601221464251" />
-    <state width="1356" height="300" key="GridCell.Tab.1.bottom" timestamp="1601225102319">
+    <state width="1356" height="184" key="GridCell.Tab.1.bottom" timestamp="1601253073433">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.1.bottom/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215060255" />
-    <state width="1356" height="300" key="GridCell.Tab.1.bottom/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1601225102319" />
+    <state width="1356" height="184" key="GridCell.Tab.1.bottom/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1601253073433" />
     <state width="1356" height="219" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1601221464189" />
-    <state width="1356" height="300" key="GridCell.Tab.1.center" timestamp="1601225102319">
+    <state width="1356" height="184" key="GridCell.Tab.1.center" timestamp="1601253073432">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.1.center/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215060254" />
-    <state width="1356" height="300" key="GridCell.Tab.1.center/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1601225102319" />
+    <state width="1356" height="184" key="GridCell.Tab.1.center/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1601253073432" />
     <state width="1356" height="219" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1601221464189" />
-    <state width="1356" height="300" key="GridCell.Tab.1.left" timestamp="1601225102319">
+    <state width="1356" height="184" key="GridCell.Tab.1.left" timestamp="1601253073432">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.1.left/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215060254" />
-    <state width="1356" height="300" key="GridCell.Tab.1.left/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1601225102319" />
+    <state width="1356" height="184" key="GridCell.Tab.1.left/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1601253073432" />
     <state width="1356" height="219" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1601221464189" />
-    <state width="1356" height="300" key="GridCell.Tab.1.right" timestamp="1601225102319">
+    <state width="1356" height="184" key="GridCell.Tab.1.right" timestamp="1601253073432">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.1.right/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215060255" />
-    <state width="1356" height="300" key="GridCell.Tab.1.right/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1601225102319" />
+    <state width="1356" height="184" key="GridCell.Tab.1.right/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1601253073432" />
     <state width="1356" height="219" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1601221464189" />
     <state x="435" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1601143080233">
       <screen x="0" y="23" width="1440" height="877" />
@@ -262,13 +231,6 @@
           <line>64</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
-        <breakpoint enabled="true" suspend="THREAD" type="OCSymbolicBreakpointType">
-          <properties>
-            <option name="moduleName" value="libart.so" />
-            <option name="symbolPattern" value="art_sigsegv_fault" />
-          </properties>
-          <option name="timeStamp" value="86" />
-        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>

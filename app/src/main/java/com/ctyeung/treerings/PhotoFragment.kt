@@ -96,14 +96,16 @@ class PhotoFragment : BaseFragment() {
             override fun onProgressChanged(seek: SeekBar,
                                            progress: Int,
                                            fromUser: Boolean) {
-                thresholdValue = seek.progress
-                detectEdges(thresholdValue)
             }
 
             override fun onStartTrackingTouch(seek: SeekBar) {
             }
 
             override fun onStopTrackingTouch(seek: SeekBar) {
+                if(thresholdValue !== seek.progress) {
+                    thresholdValue = seek.progress
+                    detectEdges(thresholdValue)
+                }
             }
         })
     }
