@@ -3,7 +3,7 @@ Challenge: count tree rings from a photo. \
 Device: Android mobile (no server backend processing)
 
 ### Workflow
-Camera/Gallery -> Photo -> Select Path -> Deriviative -> Count -> Render Path-normals overlay
+Camera/Gallery -> Photo -> Deriviative -> Select Path -> Count -> Render Path-normals overlay
 
 #### Navigation Graph
 <img width="508" alt="Screen Shot 2020-09-20 at 7 51 47 PM" src="https://user-images.githubusercontent.com/1282659/93726432-95bd9400-fb7b-11ea-9a39-c4d7127aa634.png">
@@ -14,6 +14,15 @@ Select and preview your tree ring image.
 2. Gallery : pick a photo from gallery.
 3. Next : navigate to next screen. \
 <img width="300" alt="starter" src="https://user-images.githubusercontent.com/1282659/93726809-a5d67300-fb7d-11ea-842c-7065f897f563.png"> <img width="220" src="https://user-images.githubusercontent.com/1282659/93726815-abcc5400-fb7d-11ea-8415-56c07d7b719d.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/93726816-af5fdb00-fb7d-11ea-9c59-629c2936bcf7.jpg"> 
+
+### Image processing 
+User should select the best threshold value from slider for best edge detection. \
+Default value = 30 in range 0 - 255. 
+
+The image process steps are convolution -> threshold -> merge (source + highlighted edges). \
+Convolution with 1st derivative sobel operators on x, y, 45 degree axis. \
+Kernel is 3x3 where x-sobel values = 0, 1, -1 \
+<img width="220" src="https://user-images.githubusercontent.com/1282659/94371964-e115fc00-00bf-11eb-832d-b29e2da63642.jpg">
 
 ### User draw line - identify rings cross-section 
 Find the best cross-section to count your tree rings. \
@@ -31,8 +40,9 @@ Render count result
 1. Adjust sensitivity.
 
 
-### Configuration ../src/CMakeList.txt
-Below addition is <bold>CRITICAL</bold> to JNI referencing to C++ classes.
+### JNI Configuration 
+Below addition is <bold>CRITICAL</bold> to JNI referencing to C++ classes. \
+Please consider the file,  ../src/CMakeList.txt \
 
 add_library( # Sets the name of the library.
         native-lib
