@@ -22,7 +22,7 @@ Default value = 30 in range 0 - 255.
 The image process steps are convolution -> threshold -> merge (source + highlighted edges). \
 Convolution with 1st derivative sobel operators on x, y, 45 degree axis. \
 Kernel is 3x3 where x-sobel values = 0, 1, -1 \
-<img width="220" src="https://user-images.githubusercontent.com/1282659/94371964-e115fc00-00bf-11eb-832d-b29e2da63642.jpg">
+<img width="220" src="https://user-images.githubusercontent.com/1282659/94380266-77671380-00fa-11eb-822d-99872d1c25dc.jpg">
 
 ### User draw line - identify rings cross-section 
 Find the best cross-section to count your tree rings. \
