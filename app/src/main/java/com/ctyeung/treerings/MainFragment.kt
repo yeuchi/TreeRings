@@ -147,7 +147,7 @@ class MainFragment : Fragment() {
             bmp = BitmapUtils.setPortrait(bmp)
 
             binding?.layout?.photo_preview?.setImageBitmap(bmp!!)
-            photoStore.setNames("hello", "goldBucket")
+            photoStore.setNames("original", "treerings")
             val returned = photoStore.save(bmp!!)
 
             if(returned != "")

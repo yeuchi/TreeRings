@@ -104,6 +104,7 @@ class PhotoFragment : BaseFragment() {
             override fun onStopTrackingTouch(seek: SeekBar) {
                 if(thresholdValue !== seek.progress) {
                     thresholdValue = seek.progress
+                    txtSeekValue.text = seek.progress.toString()
                     detectEdges(thresholdValue)
                 }
             }
@@ -136,11 +137,13 @@ class PhotoFragment : BaseFragment() {
     }
 
     fun onClickNext() {
-        /*
-         * same processed image and pass for next stage.
-         */
-        val str = photoStore.imageUri.toString() ?: ""
-        var bundle = bundleOf("url" to str)
-        binding!!.root.findNavController().navigate(R.id.action_photoFragment_to_detailFragment, bundle)
+        if(bmpOut != null) {
+            photoStore.setNames("edges", "treerings")
+            val returned = photoStore.save(bmpOut!!)
+            val str = photoStore.imageUri.toString() ?: ""
+            var bundle = bundleOf("url" to str)
+            binding!!.root.findNavController()
+                .navigate(R.id.action_photoFragment_to_detailFragment, bundle)
+        }
     }
 }
