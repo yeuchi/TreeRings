@@ -4,9 +4,9 @@ import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.view.MenuItem
-import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.ctyeung.treerings.img.Kernel
 
 class MainActivity : AppCompatActivity() {
 
@@ -59,7 +59,7 @@ class MainActivity : AppCompatActivity() {
      * https://stackoverflow.com/questions/4939266/android-bitmap-native-code-linking-problem
      * need to set option in CMakeLists.txt
      */
-    fun convolve(kernel:Kernel, bmpIn:Bitmap, bmpOut:Bitmap, threshold:Int) {
+    fun convolve(kernel: Kernel, bmpIn:Bitmap, bmpOut:Bitmap, threshold:Int) {
         try {
 //            val bmpIn: Bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.white_lion_small)
 //            val bmpOut: Bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.white_lion_small_gray)

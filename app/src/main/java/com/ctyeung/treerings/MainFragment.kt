@@ -1,9 +1,7 @@
 package com.ctyeung.treerings
 
-import android.app.Activity
 import android.content.Intent
 import android.graphics.Bitmap
-import android.graphics.Matrix
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
@@ -15,9 +13,11 @@ import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import com.ctyeung.treerings.data.PhotoStorage
+import com.ctyeung.treerings.data.SharedPref
 import com.ctyeung.treerings.databinding.FragmentMainBinding
+import com.ctyeung.treerings.img.BitmapUtils
 import kotlinx.android.synthetic.main.fragment_main.*
-import java.io.File
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -40,7 +40,7 @@ class MainFragment : Fragment() {
     val REQUEST_TAKE_PHOTO = 1
     val PICK_PHOTO_CODE = 1046
 
-    lateinit var photoStore:PhotoStorage
+    lateinit var photoStore: PhotoStorage
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -129,11 +129,11 @@ class MainFragment : Fragment() {
     fun handleLoadPhoto(data: Intent?){
         val photoUri:Uri = data?.data!!;
         if(photoUri != null) {
-            photoStore.read(
-                requireActivity().contentResolver,
-                photoUri,
-                binding!!.layout!!.photo_preview
-            )
+            photoStore.read(requireActivity().contentResolver,
+                            photoUri,
+                            binding!!.layout!!.photo_preview)
+
+            persistBitmapAttributes()
             return
         }
         Toast.makeText(this.context, "photoUri is null", Toast.LENGTH_LONG).show()
@@ -152,8 +152,16 @@ class MainFragment : Fragment() {
 
             if(returned != "")
                 Toast.makeText(this.context, returned, Toast.LENGTH_LONG).show()
+
+            persistBitmapAttributes()
             return
         }
         Toast.makeText(this.context, "data is null", Toast.LENGTH_LONG).show()
+    }
+
+    // persist in shared preference
+    private fun persistBitmapAttributes() {
+        SharedPref.setFilePath(SharedPref.keySrcFilePath, photoStore.imageUri.toString())
+        SharedPref.setBitmapSize(photoStore.bmp?.width?:0, photoStore.bmp?.height?:0)
     }
 }

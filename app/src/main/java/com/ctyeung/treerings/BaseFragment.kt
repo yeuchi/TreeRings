@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.fragment_photo.*
+import com.ctyeung.treerings.data.PhotoStorage
 
 open class BaseFragment : Fragment(), IOnBackPressed {
 

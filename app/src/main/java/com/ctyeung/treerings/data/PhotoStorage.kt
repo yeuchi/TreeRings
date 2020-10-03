@@ -1,9 +1,8 @@
-package com.ctyeung.treerings
+package com.ctyeung.treerings.data
 
 import android.content.ContentResolver
 import android.content.ContentValues
 import android.content.Context
-import android.content.Intent
 import android.database.Cursor
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -13,8 +12,7 @@ import android.provider.MediaStore.MediaColumns
 import android.text.format.DateUtils
 import android.util.Log
 import android.widget.ImageView
-import kotlinx.android.synthetic.main.activity_main.*
-import java.io.File
+import com.ctyeung.treerings.img.BitmapUtils
 
 
 class PhotoStorage(val context:Context) {

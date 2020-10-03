@@ -1,13 +1,16 @@
 package com.ctyeung.treerings
 
+import android.app.AlertDialog
 import android.net.Uri
 import android.os.Bundle
+import android.util.DisplayMetrics
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import com.ctyeung.treerings.data.SharedPref
 import com.ctyeung.treerings.databinding.FragmentDetailBinding
 import kotlinx.android.synthetic.main.fragment_detail.*
 import kotlinx.android.synthetic.main.fragment_photo.*
@@ -57,7 +60,26 @@ class DetailFragment : BaseFragment() {
 
         if(photoUri != null) {
             loadPhoto(binding!!.layout!!.photo_view, photoUri)
+            // TODO display an alertDialog for tutorial
+
+            val size = getScreenSize()
+            this.paper.demoLine(size.first, size.second)
+            showAlertDialog()
         }
+    }
+
+    private fun showAlertDialog() {
+        val builder = AlertDialog.Builder(this.context)
+        builder.setTitle("Count Rings")
+            .setMessage("Draw an intersecting line across rings to count.")
+            .create()
+            .show()
+    }
+
+    private fun getScreenSize():Pair<Int, Int> {
+        val displayMetrics = DisplayMetrics()
+        this.activity?.windowManager?.defaultDisplay?.getMetrics(displayMetrics)
+        return Pair<Int, Int> (displayMetrics.widthPixels, displayMetrics.heightPixels)
     }
 
     companion object {

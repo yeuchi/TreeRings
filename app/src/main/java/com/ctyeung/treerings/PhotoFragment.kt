@@ -1,19 +1,21 @@
 package com.ctyeung.treerings
 
+import android.app.AlertDialog
 import android.graphics.*
-import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
+import com.ctyeung.treerings.data.SharedPref
 import com.ctyeung.treerings.databinding.FragmentPhotoBinding
+import com.ctyeung.treerings.img.BitmapUtils
+import com.ctyeung.treerings.img.Kernel
+import com.ctyeung.treerings.img.KernelFactory
 import kotlinx.android.synthetic.main.fragment_photo.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -51,7 +53,7 @@ class PhotoFragment : BaseFragment() {
 
     protected var bmpIn:Bitmap? = null
     protected var bmpOut:Bitmap? = null
-    protected var kernel:Kernel? = null
+    protected var kernel: Kernel? = null
     protected var thresholdValue:Int = 30
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -68,9 +70,18 @@ class PhotoFragment : BaseFragment() {
                 val photoEdges = binding!!.layout!!.photo_view
                 photoEdges.setImageBitmap(bmpOut)
                 detectEdges(thresholdValue)
+                showAlertDialog()
             }
         }
         handleSeekBar()
+    }
+
+    private fun showAlertDialog() {
+        val builder = AlertDialog.Builder(this.context)
+        builder.setTitle("Identify Rings")
+            .setMessage("Adjust threshold to identify rings.")
+            .create()
+            .show()
     }
 
     /*
@@ -140,10 +151,16 @@ class PhotoFragment : BaseFragment() {
         if(bmpOut != null) {
             photoStore.setNames("edges", "treerings")
             val returned = photoStore.save(bmpOut!!)
+            persistBitmapLines()
+
             val str = photoStore.imageUri.toString() ?: ""
             var bundle = bundleOf("url" to str)
             binding!!.root.findNavController()
                 .navigate(R.id.action_photoFragment_to_detailFragment, bundle)
         }
+    }
+
+    private fun persistBitmapLines() {
+        SharedPref.setFilePath(SharedPref.keyLineFilePath, photoStore.imageUri.toString())
     }
 }

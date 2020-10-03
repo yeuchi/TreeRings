@@ -23,6 +23,20 @@ class MyPaperView :View {
         listPoints = ArrayList()
     }
 
+    fun demoLine(width:Int, height:Int) {
+        if(width > 0 && height > 0) {
+            // draw a demo line so user has something to start with
+            listPoints.clear()
+
+            val midPoint = PointF(width.toFloat() / 2F, height.toFloat() / 2F)
+            listPoints.add(midPoint)
+
+            val endPoint = PointF(width.toFloat() / 2F, height.toFloat() * 0.2F / 2F)
+            listPoints.add(endPoint)
+            invalidate()
+        }
+    }
+
     fun hasLine():Boolean {
         if(listPoints.size >= 2)
             return true
@@ -82,7 +96,7 @@ class MyPaperView :View {
     private fun drawPoint(p:PointF, canvas:Canvas) {
         val paint = Paint()
         paint.style = Paint.Style.FILL
-        paint.color = Color.BLUE
+        paint.color = Color.BLACK
         canvas?.drawCircle(p.x, p.y, 5F, paint);
     }
 
@@ -93,7 +107,7 @@ class MyPaperView :View {
         paint.style = Paint.Style.STROKE
         paint.strokeJoin = Paint.Join.ROUND
         paint.strokeCap = Paint.Cap.ROUND
-        paint.color = Color.GREEN
+        paint.color = Color.BLUE
         canvas?.drawLine(p1.x, p1.y, p2.x, p2.y, paint)
     }
 
