@@ -22,7 +22,9 @@ Default value = 30 in range 0 - 255.
 The image process steps are convolution -> threshold -> merge (source + highlighted edges). \
 Convolution with 1st derivative sobel operators on x, y, 45 degree axis. \
 Kernel is 3x3 where x-sobel values = 0, 1, -1 \
-<img width="220" src="https://user-images.githubusercontent.com/1282659/94380266-77671380-00fa-11eb-822d-99872d1c25dc.jpg">
+<img width="220" src="https://user-images.githubusercontent.com/1282659/94380830-c44be980-00fc-11eb-95bb-651b952458ce.jpg">
+<img width="220" src="https://user-images.githubusercontent.com/1282659/94380835-c746da00-00fc-11eb-9b6d-80f484c82b3f.jpg">
+<img width="220" src="https://user-images.githubusercontent.com/1282659/94380820-b9915480-00fc-11eb-9c36-3a12f57a1fc9.jpg">
 
 ### User draw line - identify rings cross-section 
 Find the best cross-section to count your tree rings. \
@@ -31,7 +33,7 @@ Find the best cross-section to count your tree rings. \
 2. Touch point #2 : most outer ring position.
 3. Touch any point : update/correct #1 or #2 (line)
 4. Next : navigate to detail screen. 
-<img width="220" src="https://user-images.githubusercontent.com/1282659/93726820-b25acb80-fb7d-11ea-8e2b-3124bab7d353.jpg">
+<img width="220" src="https://user-images.githubusercontent.com/1282659/94380815-b6966400-00fc-11eb-9f32-8ab40b59223e.jpg">
 
 ### Count rings - calculation ring xings on line
 Perform image process to find/count rings crossing from user-drawn-line. \
