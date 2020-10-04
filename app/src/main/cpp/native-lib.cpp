@@ -15,6 +15,7 @@
 #include <android/log.h>
 #include <android/bitmap.h>
 #include "Convolution.h"
+#include "RingDetector.h"
 
 #define  LOG_TAG    "libibmphotophun"
 #define  LOGI(...)  __android_log_print(ANDROID_LOG_INFO,LOG_TAG,__VA_ARGS__)
@@ -151,4 +152,28 @@ Java_com_ctyeung_treerings_MainActivity_imageConvolveFromJNI(JNIEnv * env,
                                 jint kernel_width,
                                 jint threshold) {
     Convolve(env, obj, bmp_in, bmp_out, kernel, kernel_width, threshold);
+}
+
+void FindIntersects(JNIEnv *env,
+                      jobject obj,
+                      jobject bitmapsource,
+                      jint threshold)
+{
+
+
+    initializeBitmap(env, bitmapsource);
+
+    RingDetector ringDetector;
+    ringDetector.Find(infoSource, pixelsSource, threshold);
+
+    releaseBitmap(env, bitmapsource);
+    LOGI("unlocking pixels");
+}
+
+extern "C" JNIEXPORT void JNICALL
+Java_com_ctyeung_treerings_MainActivity_imageFindIntersectsFromJNI(JNIEnv * env,
+                                                                 jobject obj,
+                                                                 jobject bmp_in,
+                                                                 jint threshold) {
+    FindIntersects(env, obj, bmp_in, threshold);
 }

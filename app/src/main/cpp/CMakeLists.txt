@@ -19,6 +19,7 @@ add_library( # Sets the name of the library.
              SHARED
 
              # Provides a relative path to your source file(s).
+            RingDetector.cpp
             Convolution.cpp
             native-lib.cpp )
 

@@ -1,6 +1,12 @@
 [
 {
   "directory": "/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "/Users/ctyeung/Library/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi26 --gcc-toolchain=/Users/ctyeung/Library/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/ctyeung/Library/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS -I/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/src/main/cpp/src/main/cpp  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/RingDetector.cpp.o -c /Users/ctyeung/Documents/GitHub/Android/TreeRings/app/src/main/cpp/RingDetector.cpp",
+  "file": "/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/src/main/cpp/RingDetector.cpp"
+},
+
+{
+  "directory": "/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/.cxx/cmake/debug/armeabi-v7a",
   "command": "/Users/ctyeung/Library/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi26 --gcc-toolchain=/Users/ctyeung/Library/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/ctyeung/Library/Android/sdk/ndk/21.0.6113669/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS -I/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/src/main/cpp/src/main/cpp  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/Convolution.cpp.o -c /Users/ctyeung/Documents/GitHub/Android/TreeRings/app/src/main/cpp/Convolution.cpp",
   "file": "/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/src/main/cpp/Convolution.cpp"
 },

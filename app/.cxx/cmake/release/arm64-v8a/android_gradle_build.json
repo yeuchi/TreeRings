@@ -21,6 +21,11 @@
       "artifactName": "native-lib",
       "files": [
         {
+          "src": "/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/src/main/cpp/RingDetector.cpp",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        },
+        {
           "src": "/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/src/main/cpp/Convolution.cpp",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0

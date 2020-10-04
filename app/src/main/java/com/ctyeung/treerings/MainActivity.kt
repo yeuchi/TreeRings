@@ -72,5 +72,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
     external fun imageConvolveFromJNI(bmpIn: Bitmap?, BmpOut: Bitmap?, kernel: IntArray?, kernelWidth: Int, threshold: Int)
+    external fun imageFindIntersectsFromJNI(bmpIn: Bitmap?, threshold: Int)
 
 }
