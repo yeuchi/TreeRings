@@ -42,6 +42,26 @@ object SharedPref {
     }
 
     /*
+     * ImageView screen dimension
+     */
+    val keyImageViewWidth = "imageviewwidth"
+    val keyImageViewHeight = "imageviewheight"
+
+    fun getImageViewSize():Pair<Int, Int> {
+        return Pair(getInt(keyImageViewWidth),
+            getInt(keyImageViewHeight))
+    }
+
+    fun setImageViewSize(width:Int, height:Int) {
+        val sharedPreferences =
+            getSharedPref(
+                MainApplication.applicationContext()
+            )
+        setInt(keyImageViewWidth, width)
+        setInt(keyImageViewHeight, height)
+    }
+
+    /*
      * Bitmap dimension
      */
     val keyBmpWidth = "bmpwidth"

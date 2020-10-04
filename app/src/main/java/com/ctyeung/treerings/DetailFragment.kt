@@ -1,6 +1,7 @@
 package com.ctyeung.treerings
 
 import android.app.AlertDialog
+import android.graphics.PointF
 import android.net.Uri
 import android.os.Bundle
 import android.util.DisplayMetrics
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewTreeObserver
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.ctyeung.treerings.data.SharedPref
@@ -16,6 +18,7 @@ import kotlinx.android.synthetic.main.fragment_detail.*
 import kotlinx.android.synthetic.main.fragment_photo.*
 import kotlinx.android.synthetic.main.fragment_photo.line_container
 import kotlinx.android.synthetic.main.fragment_photo.photo_view
+import java.util.ArrayList
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -28,12 +31,11 @@ private const val ARG_PARAM2 = "param2"
  * 2. perform the image processing -- allow user to adjust sensitivity.
  * 3. user selects and count !
  */
-class DetailFragment : BaseFragment() {
+class DetailFragment : BaseFragment(), IOnNewLine {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
     private lateinit var binding:FragmentDetailBinding
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,6 +66,8 @@ class DetailFragment : BaseFragment() {
 
             val size = getScreenSize()
             this.paper.demoLine(size.first, size.second)
+            this.paper.callback = this
+
             showAlertDialog()
         }
     }
@@ -77,6 +81,7 @@ class DetailFragment : BaseFragment() {
     }
 
     private fun getScreenSize():Pair<Int, Int> {
+
         val displayMetrics = DisplayMetrics()
         this.activity?.windowManager?.defaultDisplay?.getMetrics(displayMetrics)
         return Pair<Int, Int> (displayMetrics.widthPixels, displayMetrics.heightPixels)
@@ -105,5 +110,10 @@ class DetailFragment : BaseFragment() {
     override fun onBackPressed(): Boolean {
         binding!!.root.findNavController().navigate(R.id.action_photoFragment_to_mainFragment)
         return true
+    }
+
+    // new line to compute intersections
+    override fun onNewLine(points:ArrayList<PointF>) {
+        
     }
 }

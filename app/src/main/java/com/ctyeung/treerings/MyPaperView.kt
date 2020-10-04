@@ -8,6 +8,7 @@ import android.view.View
 import java.util.ArrayList
 
 class MyPaperView :View {
+    var callback:IOnNewLine?=null
     constructor(context: Context) : this(context, null)
     constructor(context: Context, attrs: AttributeSet?) : this(context, attrs, 0)
     constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr) {
@@ -37,19 +38,19 @@ class MyPaperView :View {
         }
     }
 
-    fun hasLine():Boolean {
-        if(listPoints.size >= 2)
-            return true
-
-        return false
-    }
-
     override fun onDraw(canvas: Canvas) {
         if(listPoints.size >= 2)
             drawLine(listPoints[0], listPoints[1], canvas)
 
         for(p in listPoints)
             drawPoint(p, canvas)
+    }
+
+    fun hasLine():Boolean {
+        if(listPoints.size >= 2)
+            return true
+
+        return false
     }
 
     fun clear() {
@@ -88,6 +89,8 @@ class MyPaperView :View {
 
             else -> {   // 2 is the max supported - find nearest, replace, draw line
                 updateLine(p)
+                if(callback!=null)
+                    callback!!.onNewLine(listPoints)
             }
         }
         invalidate()
