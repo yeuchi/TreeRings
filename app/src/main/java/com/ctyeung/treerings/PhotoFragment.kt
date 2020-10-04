@@ -16,6 +16,7 @@ import com.ctyeung.treerings.databinding.FragmentPhotoBinding
 import com.ctyeung.treerings.img.BitmapUtils
 import com.ctyeung.treerings.img.Kernel
 import com.ctyeung.treerings.img.KernelFactory
+import com.ctyeung.treerings.img.KernelType
 import kotlinx.android.synthetic.main.fragment_photo.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -65,7 +66,7 @@ class PhotoFragment : BaseFragment() {
         if(photoUri != null) {
             bmpIn = photoStore.load(requireActivity().contentResolver, photoUri!!)
             if(bmpIn != null) {
-                this.kernel = KernelFactory.verticalDerivative()
+                this.kernel = KernelFactory.create(KernelType.TYPE_XY_DERIVATIVE)
                 this.bmpOut = BitmapUtils.create(bmpIn!!)
                 val photoEdges = binding!!.layout!!.photo_view
                 photoEdges.setImageBitmap(bmpOut)

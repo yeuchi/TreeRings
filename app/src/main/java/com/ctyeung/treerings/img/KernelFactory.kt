@@ -1,6 +1,27 @@
 package com.ctyeung.treerings.img
 
 object KernelFactory {
+
+    fun create(type:KernelType):Kernel {
+        return when(type) {
+            KernelType.TYPE_BLUR -> blur()
+            KernelType.TYPE_HOR_DERIVATIVE -> horizontalDerivative()
+            KernelType.TYPE_VERT_DERIVATIVE -> verticalDerivative()
+            KernelType.TYPE_ISO_DERIVATIVE -> isotropicDerivative()
+            KernelType.TYPE_SHARPEN -> sharpen()
+            KernelType.TYPE_CUSTOM -> custom()
+            KernelType.TYPE_XY_DERIVATIVE -> XYDerivative()
+
+            KernelType.TYPE_IDENTITY -> identity()
+            else -> identity()
+        }
+    }
+
+    // TODO - give user ability to enter custom values
+    fun custom():Kernel {
+        return identity()
+    }
+
     fun XYDerivative(): Kernel {
         val kernelWidth = 3
         val kernel = IntArray(kernelWidth * kernelWidth)
