@@ -10,7 +10,7 @@ object KernelFactory {
             KernelType.TYPE_ISO_DERIVATIVE -> isotropicDerivative()
             KernelType.TYPE_SHARPEN -> sharpen()
             KernelType.TYPE_CUSTOM -> custom()
-            KernelType.TYPE_XY_DERIVATIVE -> XYDerivative()
+            KernelType.TYPE_XY45_DERIVATIVE -> XYDerivative()
 
             KernelType.TYPE_IDENTITY -> identity()
             else -> identity()
@@ -22,6 +22,13 @@ object KernelFactory {
         return identity()
     }
 
+    /*
+     * 0 | 0 | 0
+     * - - - - -
+     * 0 | 3 | -1
+     * - - - - -
+     * -1|-1 | 0
+     */
     fun XYDerivative(): Kernel {
         val kernelWidth = 3
         val kernel = IntArray(kernelWidth * kernelWidth)
@@ -37,6 +44,13 @@ object KernelFactory {
         return Kernel(kernelWidth, kernel, KernelType.TYPE_HOR_DERIVATIVE)
     }
 
+    /*
+     * -1| 1 | 0
+     * - - - - -
+     * -1| 1 | 0
+     * - - - - -
+     * -1| 1 | 0
+     */
     fun horizontalDerivative(): Kernel {
         val kernelWidth = 3
         val kernel = IntArray(kernelWidth * kernelWidth)
@@ -52,6 +66,13 @@ object KernelFactory {
         return Kernel(kernelWidth, kernel, KernelType.TYPE_HOR_DERIVATIVE)
     }
 
+    /*
+     * -1|-1 |-1
+     * - - - - -
+     *  1| 1 | 1
+     * - - - - -
+     *  0| 0 | 0
+     */
     fun verticalDerivative(): Kernel {
         val kernelWidth = 3
         val kernel = IntArray(kernelWidth * kernelWidth)

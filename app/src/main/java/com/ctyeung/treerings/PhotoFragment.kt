@@ -66,7 +66,7 @@ class PhotoFragment : BaseFragment() {
         if(photoUri != null) {
             bmpIn = photoStore.load(requireActivity().contentResolver, photoUri!!)
             if(bmpIn != null) {
-                this.kernel = KernelFactory.create(KernelType.TYPE_XY_DERIVATIVE)
+                this.kernel = KernelFactory.create(KernelType.TYPE_XY45_DERIVATIVE)
                 this.bmpOut = BitmapUtils.create(bmpIn!!)
                 val photoEdges = binding!!.layout!!.photo_view
                 photoEdges.setImageBitmap(bmpOut)
