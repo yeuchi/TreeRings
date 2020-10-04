@@ -14,7 +14,8 @@ public:
 public:
     bool Find(AndroidBitmapInfo infoSource,
               void* pixelsSource,
-              int threshold);
+              jint *lineIntersects, int length, // array of interection points
+              int x0, int y0, int x1, int y1);  // line endpoints 0 -> 1
 
 protected:
 

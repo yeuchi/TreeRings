@@ -155,25 +155,44 @@ Java_com_ctyeung_treerings_MainActivity_imageConvolveFromJNI(JNIEnv * env,
 }
 
 void FindIntersects(JNIEnv *env,
-                      jobject obj,
-                      jobject bitmapsource,
-                      jint threshold)
+                    jobject obj,
+                    jobject bitmapsource,
+                    jintArray lineIntersects,
+                    jint length,
+                    jint x0,
+                    jint y0,
+                    jint x1,
+                    jint y1)
 {
+    // initializations, declarations, etc
+    jint *c_array;
 
+    // get a pointer to the array
+    c_array = env->GetIntArrayElements(lineIntersects, NULL);
+
+    // do some exception checking
+    if (c_array == NULL) {
+        return; // exception occurred
+    }
 
     initializeBitmap(env, bitmapsource);
-
     RingDetector ringDetector;
-    ringDetector.Find(infoSource, pixelsSource, threshold);
+    ringDetector.Find(infoSource, pixelsSource, &c_array[0], length, x0, y0, x1, y1);
 
+    env->SetIntArrayRegion(lineIntersects, 0, length, c_array);
     releaseBitmap(env, bitmapsource);
     LOGI("unlocking pixels");
 }
 
 extern "C" JNIEXPORT void JNICALL
 Java_com_ctyeung_treerings_MainActivity_imageFindIntersectsFromJNI(JNIEnv * env,
-                                                                 jobject obj,
-                                                                 jobject bmp_in,
-                                                                 jint threshold) {
-    FindIntersects(env, obj, bmp_in, threshold);
+                                         jobject obj,
+                                         jobject bmp_in,
+                                         jintArray lineIntersects,
+                                         jint length,
+                                         jint x0,
+                                         jint y0,
+                                         jint x1,
+                                         jint y1) {
+    FindIntersects(env, obj, bmp_in, lineIntersects, length, x0, y0, x1, y1);
 }

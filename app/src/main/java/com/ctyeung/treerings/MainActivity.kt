@@ -2,6 +2,7 @@ package com.ctyeung.treerings
 
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.PointF
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
@@ -72,6 +73,20 @@ class MainActivity : AppCompatActivity() {
         }
     }
     external fun imageConvolveFromJNI(bmpIn: Bitmap?, BmpOut: Bitmap?, kernel: IntArray?, kernelWidth: Int, threshold: Int)
-    external fun imageFindIntersectsFromJNI(bmpIn: Bitmap?, threshold: Int)
 
+    fun intersect(bmp:Bitmap,
+                  lineIntersets: IntArray?,
+                  points:ArrayList<PointF>) {
+
+        /*
+         * need to scale bitmap size ratio from screen
+         */
+        imageFindIntersectsFromJNI( bmp,
+                                    lineIntersets,
+                                    lineIntersets!!.size,
+                                    points[0].x.toInt(), points[0].y.toInt(),
+                                    points[1].x.toInt(), points[1].y.toInt())
+    }
+
+    external fun imageFindIntersectsFromJNI(bmpIn: Bitmap?, lineIntersets:IntArray?, len:Int, x0:Int, y0:Int, x1:Int, y1:Int)
 }

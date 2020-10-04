@@ -36,6 +36,7 @@ class DetailFragment : BaseFragment(), IOnNewLine {
     private var param1: String? = null
     private var param2: String? = null
     private lateinit var binding:FragmentDetailBinding
+    protected var lineIntersects:IntArray?=null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -112,8 +113,22 @@ class DetailFragment : BaseFragment(), IOnNewLine {
         return true
     }
 
-    // new line to compute intersections
+    /*
+     * new line to compute intersections
+     */
     override fun onNewLine(points:ArrayList<PointF>) {
-        
+        val size = SharedPref.getBitmapSize()
+        val maxLen = Math.sqrt((size.first * size.first + size.second * size.second).toDouble()).toInt()
+        this.lineIntersects = IntArray(maxLen)
+
+        if (photoStore.bmp != null) {
+            // find intersections
+            (this.activity as MainActivity).intersect(photoStore.bmp!!, lineIntersects, points)
+
+            // update screen with highlight
+            for(i in lineIntersects!!) {
+
+            }
+        }
     }
 }
