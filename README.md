@@ -2,7 +2,7 @@
 Challenge: count tree rings from a photo. \
 Device: Android mobile (no server backend processing)
 
-### Workflow
+### Application Workflow
 Camera/Gallery -> Photo -> Deriviative -> Select Path -> Count -> Render Path-normals overlay
 
 #### Navigation Graph
