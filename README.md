@@ -44,7 +44,7 @@ Current algorithm is simply a 1st derivative to detect the transition of ring co
 Some noise is removed by accepting only low->high transition (no high->high, high->low). \
 <img width="220" src="https://user-images.githubusercontent.com/1282659/97117069-6bf21280-16cf-11eb-8ba7-19cfd2f66654.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97117072-6eed0300-16cf-11eb-9550-0502a43eb1b4.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97116944-c2128600-16ce-11eb-8939-254b959a6cbe.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97116948-c50d7680-16ce-11eb-82ff-e602bae7d548.jpg">
 
-
+## Configuration Details
 
 ### JNI Configuration 
 Below addition is <bold>CRITICAL</bold> to JNI referencing to C++ classes. \
@@ -67,6 +67,9 @@ target_link_libraries( # Specifies the target library.
         native-lib
 +       -ljnigraphics
 ```
+### Version
+<img width="400" alt="Screen Shot 2020-10-25 at 2 56 56 PM" src="https://user-images.githubusercontent.com/1282659/97117537-65b16580-16d2-11eb-824e-f0cec35d49aa.png">
+
 
 # References
 1. Android10CameraBasics - C.T. Yeung \
