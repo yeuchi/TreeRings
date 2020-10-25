@@ -1,6 +1,7 @@
 package com.ctyeung.treerings
 
 import android.app.AlertDialog
+import android.graphics.Point
 import android.graphics.PointF
 import android.net.Uri
 import android.os.Bundle
@@ -125,10 +126,8 @@ class DetailFragment : BaseFragment(), IOnNewLine {
             // find intersections
             (this.activity as MainActivity).intersect(photoStore.bmp!!, lineIntersects, points)
 
-            // update screen with highlight
-            for(i in lineIntersects!!) {
-
-            }
+            // update line on screen with intersection highlight
+            this.paper.drawIntersects(lineIntersects)
         }
     }
 }

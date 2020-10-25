@@ -117,7 +117,9 @@ class PhotoFragment : BaseFragment() {
                 if(thresholdValue !== seek.progress) {
                     thresholdValue = seek.progress
                     txtSeekValue.text = seek.progress.toString()
+                    //seek.isIndeterminate = true
                     detectEdges(thresholdValue)
+                    //seek.isIndeterminate = false
                 }
             }
         })

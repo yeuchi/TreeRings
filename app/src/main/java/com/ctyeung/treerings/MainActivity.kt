@@ -2,11 +2,13 @@ package com.ctyeung.treerings
 
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.Point
 import android.graphics.PointF
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.ctyeung.treerings.data.SharedPref
 import com.ctyeung.treerings.img.Kernel
 
 class MainActivity : AppCompatActivity() {
@@ -72,20 +74,45 @@ class MainActivity : AppCompatActivity() {
                     Toast.LENGTH_LONG).show()
         }
     }
-    external fun imageConvolveFromJNI(bmpIn: Bitmap?, BmpOut: Bitmap?, kernel: IntArray?, kernelWidth: Int, threshold: Int)
+    external fun imageConvolveFromJNI(bmpIn: Bitmap?,
+                                      BmpOut: Bitmap?,
+                                      kernel: IntArray?,
+                                      kernelWidth: Int,
+                                      threshold: Int)
 
     fun intersect(bmp:Bitmap,
                   lineIntersets: IntArray?,
                   points:ArrayList<PointF>) {
+        /*
+         * scale screen size to bitmap size
+         */
+        val bmpSize = SharedPref.getBitmapSize()
+        val imgSize = SharedPref.getImageViewSize()
+        val xRatio = bmpSize.first.toDouble() / imgSize.first.toDouble()
+        val yRatio = bmpSize.second.toDouble() / imgSize.second.toDouble()
+        var x0 = (points[0].x.toDouble() * xRatio).toInt()
+        var y0 = (points[0].y.toDouble() * yRatio).toInt()
+        var x1 = (points[1].x.toDouble() * xRatio).toInt()
+        var y1 = (points[1].y.toDouble() * yRatio).toInt()
 
         /*
-         * need to scale bitmap size ratio from screen
+         * For now, assume vertical ish line
          */
+        if(y1 < y0) {
+            val x = x1
+            val y = y1
+
+            x1 = x0
+            y1 = y0
+            x0 = x
+            y0 = y
+        }
+
         imageFindIntersectsFromJNI( bmp,
                                     lineIntersets,
                                     lineIntersets!!.size,
-                                    points[0].x.toInt(), points[0].y.toInt(),
-                                    points[1].x.toInt(), points[1].y.toInt())
+                                    x0, y0,
+                                    x1, y1)
     }
 
     external fun imageFindIntersectsFromJNI(bmpIn: Bitmap?, lineIntersets:IntArray?, len:Int, x0:Int, y0:Int, x1:Int, y1:Int)
