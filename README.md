@@ -33,19 +33,13 @@ Find the best cross-section to count your tree rings. \
 4. Next : navigate to detail screen. \
 <img width="220" src="https://user-images.githubusercontent.com/1282659/95004158-25683700-05ad-11eb-9175-5c1588c8830d.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/95004160-28632780-05ad-11eb-9649-85264a4e21bd.jpg">
 
-### Count rings - calculation ring xings on line
-Perform image process to find/count rings crossing from user-drawn-line. \
-Render highlight on each ring crossing for inspection. \
-Render count result
-
-
-#### Move User line into Raster Image Space
+### UserLine Intersects Ring Derivative 
 Ok, there is some correction to be done in scaling user line coordinates in raster space. \
 Black line is a rendering in pixels; black should line up with blue line. \
 <img width="220" src="https://user-images.githubusercontent.com/1282659/97117073-6f859980-16cf-11eb-9e71-9adbe0a501ea.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97117074-701e3000-16cf-11eb-881c-27427484c9a9.jpg">
 
 
-#### Highlight Ring Intersections on User Line 
+### Highlight Intersection Found 
 Current algorithm is simply a 1st derivative to detect the transition of ring color. \
 Some noise is removed by accepting only low->high transition (no high->high, high->low). \
 <img width="220" src="https://user-images.githubusercontent.com/1282659/97117069-6bf21280-16cf-11eb-8ba7-19cfd2f66654.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97117072-6eed0300-16cf-11eb-9550-0502a43eb1b4.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97116944-c2128600-16ce-11eb-8939-254b959a6cbe.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97116948-c50d7680-16ce-11eb-82ff-e602bae7d548.jpg">
