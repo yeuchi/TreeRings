@@ -133,13 +133,14 @@ class MyPaperView :View {
         var isTransition = true
         var userLine = Line(listPoints[0], listPoints[1])
         val scaler = getRatio()
+        var count = 0
+        var size = SharedPref.getImageViewSize()
 
         for(i in 0 .. lineIntersects.size-1) {
             if(1 == lineIntersects[i]) {
                 if(true == isTransition) {
                     isTransition = false
 
-                    var size = SharedPref.getImageViewSize()
                     var y = (listPoints[0].y + (i / scaler.second)).toFloat()
                     var horizon = Line(PointF(0F, y), PointF(size.first.toFloat(), y))
                     var p = userLine.findIntersect(horizon)
@@ -148,9 +149,12 @@ class MyPaperView :View {
                      * TODO: replace with normal line
                      */
                     if(p != null) {
-                        val p1: PointF = PointF(p.x - 10, p.y)
-                        val p2: PointF = PointF(p.x + 10, p.y)
-                        drawLine(p1, p2, canvas)
+                        count ++
+                        val color = if(i%10==0)Color.BLACK else Color.BLUE
+                        val w = if(i%10==0)20 else 10
+                        val p1: PointF = PointF(p.x - w, p.y)
+                        val p2: PointF = PointF(p.x + w, p.y)
+                        drawLine(p1, p2, canvas, color)
                     }
                 }
             }
@@ -158,53 +162,14 @@ class MyPaperView :View {
                 isTransition = true
             }
         }
-    }
-
-    private fun getCartesian(
-        listPoints: ArrayList<PointF>,
-        lineIntersects: IntArray
-    ):ArrayList<PointF> {
-
-        val p0 = listPoints[0]
-        val p1 = listPoints[1]
-        var ratio = getRatio()
-        var list = ArrayList<PointF>()
-
-        if(p0.x == p1.x) {
-            // horizontal line
-            val top:PointF = if(p0.y < p1.y)p0 else p1
-            var i:Int = 0
-            for (line in lineIntersects) {
-                i++
-                if(line == 1) {
-                    val y = ((top.y+i)*ratio.second).toFloat()
-                    val p = PointF(top.x, y)
-                    list.add(p)
-                }
-            }
-        }
-        else if (p0.y == p1.y) {
-            // vertical line
-            val left:PointF = if(p0.x < p1.x)p0 else p1
-            var i:Int = 0
-            for (line in lineIntersects) {
-                i++
-                if(line == 1) {
-                    val x = ((left.x+i)*ratio.first).toFloat()
-                    val p = PointF(x, left.y)
-                    list.add(p)
-                }
-            }
+        val pp = if(listPoints[0].y < (size.second - listPoints[1].y)) {
+            listPoints[0]
         }
         else {
-            for(i in 0 .. lineIntersects.size-1) {
-                if(lineIntersects[i] == 1) {
-                    var y = i * ratio.second + p0.y
-
-                }
-            }
+            listPoints[1]
         }
-        return list
+
+        drawText(count.toString(), pp, canvas)
     }
 
     private fun getRatio():Pair<Double, Double> {
@@ -225,17 +190,25 @@ class MyPaperView :View {
         canvas?.drawCircle(p.x, p.y, 5F, paint);
     }
 
-    /*
-     * Draw line - crossing rings
-     */
-    private fun drawLine(p1: PointF, p2: PointF, canvas: Canvas) {
+    private fun drawText(text:String, p:PointF, canvas: Canvas) {
+        val paint = Paint()
+        paint.textSize = 40F
+        paint.isAntiAlias = true
+        paint.color = Color.BLUE
+        canvas.drawText(text, p.x, p.y, paint)
+    }
+
+    private fun drawLine(p1: PointF,
+                         p2: PointF,
+                         canvas: Canvas,
+                         color:Int? = Color.BLUE) {
         val paint = Paint()
         paint.isAntiAlias = true
         paint.strokeWidth = 3f
         paint.style = Paint.Style.STROKE
         paint.strokeJoin = Paint.Join.ROUND
         paint.strokeCap = Paint.Cap.ROUND
-        paint.color = Color.BLUE
+        paint.color = color!!
         canvas?.drawLine(p1.x, p1.y, p2.x, p2.y, paint)
     }
 
