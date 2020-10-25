@@ -2,7 +2,7 @@
 Challenge: count tree rings from a photo. \
 Device: Android mobile (no server backend processing)
 
-### Workflow
+### Application Workflow
 Camera/Gallery -> Photo -> Deriviative -> Select Path -> Count -> Render Path-normals overlay
 
 #### Navigation Graph
@@ -33,12 +33,18 @@ Find the best cross-section to count your tree rings. \
 4. Next : navigate to detail screen. \
 <img width="220" src="https://user-images.githubusercontent.com/1282659/95004158-25683700-05ad-11eb-9175-5c1588c8830d.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/95004160-28632780-05ad-11eb-9649-85264a4e21bd.jpg">
 
-### Count rings - calculation ring xings on line
-Perform image process to find/count rings crossing from user-drawn-line. \
-Render highlight on each ring crossing for inspection. \
-Render count result
-1. Adjust sensitivity.
+### UserLine Intersects Ring Derivative 
+Ok, there is some correction to be done in scaling user line coordinates in raster space. \
+Black line is a rendering in pixels; black should line up with blue line. \
+<img width="220" src="https://user-images.githubusercontent.com/1282659/97117073-6f859980-16cf-11eb-9e71-9adbe0a501ea.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97117074-701e3000-16cf-11eb-881c-27427484c9a9.jpg">
 
+
+### Highlight Intersection Found 
+Current algorithm is simply a 1st derivative to detect the transition of ring color. \
+Some noise is removed by accepting only low->high transition (no high->high, high->low). \
+<img width="220" src="https://user-images.githubusercontent.com/1282659/97117069-6bf21280-16cf-11eb-8ba7-19cfd2f66654.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97117072-6eed0300-16cf-11eb-9550-0502a43eb1b4.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97116944-c2128600-16ce-11eb-8939-254b959a6cbe.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97116948-c50d7680-16ce-11eb-82ff-e602bae7d548.jpg">
+
+## Configuration Details
 
 ### JNI Configuration 
 Below addition is <bold>CRITICAL</bold> to JNI referencing to C++ classes. \
@@ -61,6 +67,9 @@ target_link_libraries( # Specifies the target library.
         native-lib
 +       -ljnigraphics
 ```
+### Version
+<img width="400" alt="Screen Shot 2020-10-25 at 2 56 56 PM" src="https://user-images.githubusercontent.com/1282659/97117537-65b16580-16d2-11eb-824e-f0cec35d49aa.png">
+
 
 # References
 1. Android10CameraBasics - C.T. Yeung \
