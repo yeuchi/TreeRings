@@ -47,7 +47,7 @@ Black line is a rendering in pixels; black should line up with blue line. \
 
 #### Highlight Ring Intersections on User Line 
 Current algorithm is simply a 1st derivative to detect the transition of ring color. \
-Some noise is removed by accepting only low->high transition (no high->low). \
+Some noise is removed by accepting only low->high transition (no high->high, high->low). \
 <img width="220" src="https://user-images.githubusercontent.com/1282659/97117069-6bf21280-16cf-11eb-8ba7-19cfd2f66654.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97117072-6eed0300-16cf-11eb-9550-0502a43eb1b4.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97116944-c2128600-16ce-11eb-8939-254b959a6cbe.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97116948-c50d7680-16ce-11eb-82ff-e602bae7d548.jpg">
 
 
