@@ -44,6 +44,15 @@ Current algorithm is simply a 1st derivative to detect the transition of ring co
 Some noise is removed by accepting only low->high transition (no high->high, high->low). \
 <img width="220" src="https://user-images.githubusercontent.com/1282659/97119646-a19ef780-16df-11eb-87f2-0db8832eca3f.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97119647-a5327e80-16df-11eb-8625-cfd78e0a0265.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97119648-a5cb1500-16df-11eb-8a22-2665cc2ba7ca.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97119649-a663ab80-16df-11eb-8c35-eab4f2b0fcf1.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97119650-a663ab80-16df-11eb-9802-0b7faa2cefd1.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97119655-a95e9c00-16df-11eb-8f44-5fe5b61c0ec6.jpg">
 
+## Work in Progress
+
+1. Scale image to fit screen.
+2. Higher resolution image.
+3. Image Processing, identify rings from pixels.
+4. Highlight configuration / colors.
+5. About page.
+6. Progress bar 
+
 ## Configuration Details
 
 ### JNI Configuration 
