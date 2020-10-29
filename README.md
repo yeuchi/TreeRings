@@ -105,13 +105,13 @@ borrowed \
 # Inspiration
 
 
-### Earl 'Bud' Reaves \
+### Earl 'Bud' Reaves 
 After seeing many tree photos on his Facebook post, I was inspired by Bud's deligence on tracking tree age for studies.
 The prospect of automating the process might be helpful ?
 Even a quick estimate on the field might be useful ?
 
 
-### Stuart Dahlberg \
+### Stuart Dahlberg 
 Stu was a mentor and colleague in my early career, 1994. \
 Stu once showed me a pine tree cross section while pointing out the rings and said,
 
