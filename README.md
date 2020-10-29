@@ -89,8 +89,15 @@ target_link_libraries( # Specifies the target library.
 
 ## Sample Images (dev/test)
 A collection of photos are available in sub-directory /photos. \
-Many thanks to Buddy Reaves for photos: bud1-4. \
-All others are 'borrowed' on the world-wide-web.
+Many thanks to Earl 'Bud' Reaves, Maryland County Forester, for photos: bud1-4. \
+All others are 'borrowed' on the world-wide-web.\
+
+bud1-4
+<img width="100" src="https://user-images.githubusercontent.com/1282659/97547607-ff5f6800-199b-11eb-89f4-2e12ad584115.jpg"> <img width="100" src="https://user-images.githubusercontent.com/1282659/97547608-fff7fe80-199b-11eb-920b-516e1e313ecf.jpg"> <img width="100" src="https://user-images.githubusercontent.com/1282659/97547610-fff7fe80-199b-11eb-9ded-f77efcb87ec1.jpg"> <img width="100" src="https://user-images.githubusercontent.com/1282659/97547611-fff7fe80-199b-11eb-979b-511acc8ec716.jpg"> 
+
+borrowed
+<img width="100" src="https://user-images.githubusercontent.com/1282659/97547613-00909500-199c-11eb-9437-542b7be9d985.jpg"> <img width="100" src="https://user-images.githubusercontent.com/1282659/97547614-01292b80-199c-11eb-801d-3ce4f818cb3c.jpg"> <img width="100" src="https://user-images.githubusercontent.com/1282659/97547616-01292b80-199c-11eb-97cf-fa751f6321f7.jpg">
+
 
 
 # Inspiration
@@ -122,5 +129,5 @@ https://guides.codepath.com/android/Accessing-the-Camera-and-Stored-Media
 5. Custom View in Android with Kotlin by Antonio Leiva  \
 https://antonioleiva.com/custom-views-android-kotlin/
 
-6. Sample tree cross section images (bud1-4), by Buddy Reaves
+6. Sample tree cross section images (bud1-4), by Earl Bud Reaves, County Forester, Anne Arundel County, MD
 
