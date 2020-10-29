@@ -86,13 +86,13 @@ target_link_libraries( # Specifies the target library.
 
 # Inspiration
 
-Stuart Dahlberg was a mentor and colleague in my early career. \
+Stuart Dahlberg was a mentor and colleague in my early career, 1994. \
 Stu once showed me a pine tree cross section while pointing out the rings and said,
 
 "However slow or fast, every living thing must grow. \
  The moment growth stops, it is dead."
  
-Stu was 52 when he and spouse perished on a plane crash.
+Stu was 52 when he and spouse perished on a plane crash, 2012. \
 https://www.legacy.com/obituaries/sctimes/obituary.aspx?n=stuart-and-ivelisse-dahlberg&pid=156721789&fhid=12808
 
  
