@@ -2,20 +2,22 @@
 Challenge: count tree rings from a photo. \
 Device: Android mobile (no server backend processing)
 
-### Application Workflow
-Camera/Gallery -> Photo -> Deriviative -> Select Path -> Count -> Render Path-normals overlay
+### Application Workflow 
+Camera/Gallery -> Photo -> Sobel Edge Detection -> User Selects Path -> Count Intersections -> Render 
 
 #### Navigation Graph
-<img width="508" alt="Screen Shot 2020-09-20 at 7 51 47 PM" src="https://user-images.githubusercontent.com/1282659/93726432-95bd9400-fb7b-11ea-9a39-c4d7127aa634.png">
+<img width="500" alt="Screen Shot 2020-10-29 at 3 26 47 AM" src="https://user-images.githubusercontent.com/1282659/97543730-a0e3bb00-1996-11eb-9949-140831feb3fc.png">
 
-### Select photo - use camera or gallery 
+
+### Camera/Gallery -> Photo
 Select and preview your tree ring image. 
 1. Camera : take a photo.
 2. Gallery : pick a photo from gallery.
 3. Next : navigate to next screen. \
 <img width="300" alt="starter" src="https://user-images.githubusercontent.com/1282659/93726809-a5d67300-fb7d-11ea-842c-7065f897f563.png"> <img width="220" src="https://user-images.githubusercontent.com/1282659/93726815-abcc5400-fb7d-11ea-8415-56c07d7b719d.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/93726816-af5fdb00-fb7d-11ea-9c59-629c2936bcf7.jpg"> 
 
-### Image processing 
+
+### Edge Detection (Sobel Operators)
 User should select the best threshold value from slider for best edge detection. \
 Default value = 30 in range 0 - 255. 
 
@@ -24,7 +26,8 @@ Convolution with 1st derivative sobel operators on x, y, 45 degree axis. \
 Kernel is 3x3 where x-sobel values = 0, 1, -1 \
 <img width="220" src="https://user-images.githubusercontent.com/1282659/95004159-2600cd80-05ad-11eb-88b6-4fb78ca83a3e.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/94380830-c44be980-00fc-11eb-95bb-651b952458ce.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/94380835-c746da00-00fc-11eb-9b6d-80f484c82b3f.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/94380820-b9915480-00fc-11eb-9c36-3a12f57a1fc9.jpg">
 
-### User draw line - identify rings cross-section 
+
+### User Selects Path
 Find the best cross-section to count your tree rings. \
 (Try to draw a path that is 'normal' tangent across all rings) 
 1. Touch point #1 : center of tree rings. 
@@ -33,13 +36,14 @@ Find the best cross-section to count your tree rings. \
 4. Next : navigate to detail screen. \
 <img width="220" src="https://user-images.githubusercontent.com/1282659/95004158-25683700-05ad-11eb-9175-5c1588c8830d.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/95004160-28632780-05ad-11eb-9649-85264a4e21bd.jpg">
 
-### UserLine Intersects Ring Derivative 
+
+### UserLine Intersects Rings (Derivative pixels) 
 Ok, there is some correction to be done in scaling user line coordinates in raster space. \
 Black line is a rendering in pixels; black should line up with blue line. \
 <img width="220" src="https://user-images.githubusercontent.com/1282659/97117073-6f859980-16cf-11eb-9e71-9adbe0a501ea.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97117074-701e3000-16cf-11eb-881c-27427484c9a9.jpg">
 
 
-### Highlight Intersection Found 
+### Count Intersections
 Current algorithm is simply a 1st derivative to detect the transition of ring color. \
 Some noise is removed by accepting only low->high transition (no high->high, high->low). \
 <img width="220" src="https://user-images.githubusercontent.com/1282659/97119646-a19ef780-16df-11eb-87f2-0db8832eca3f.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97119647-a5327e80-16df-11eb-8625-cfd78e0a0265.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97119648-a5cb1500-16df-11eb-8a22-2665cc2ba7ca.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97119649-a663ab80-16df-11eb-8c35-eab4f2b0fcf1.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97119650-a663ab80-16df-11eb-9802-0b7faa2cefd1.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97119655-a95e9c00-16df-11eb-8f44-5fe5b61c0ec6.jpg">
@@ -80,6 +84,18 @@ target_link_libraries( # Specifies the target library.
 <img width="400" alt="Screen Shot 2020-10-25 at 2 56 56 PM" src="https://user-images.githubusercontent.com/1282659/97117537-65b16580-16d2-11eb-824e-f0cec35d49aa.png">
 
 
+# Inspiration
+
+Stuart Dahlberg was a mentor and colleague in my early career.
+Stu once showed me a pine tree cross section while pointing out the rings and said,
+
+"However slow or fast, every living thing must grow.
+ The moment growth stops, it is dead."
+ 
+Stu was 52 when he and spouse perished on a plane crash.
+https://www.legacy.com/obituaries/sctimes/obituary.aspx?n=stuart-and-ivelisse-dahlberg&pid=156721789&fhid=12808
+
+ 
 # References
 1. Android10CameraBasics - C.T. Yeung \
 https://github.com/yeuchi/Android10CameraBasic
