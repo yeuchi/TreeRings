@@ -48,6 +48,7 @@ Current algorithm is simply a 1st derivative to detect the transition of ring co
 Some noise is removed by accepting only low->high transition (no high->high, high->low). \
 <img width="220" src="https://user-images.githubusercontent.com/1282659/97119646-a19ef780-16df-11eb-87f2-0db8832eca3f.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97119647-a5327e80-16df-11eb-8625-cfd78e0a0265.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97119648-a5cb1500-16df-11eb-8a22-2665cc2ba7ca.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97119649-a663ab80-16df-11eb-8c35-eab4f2b0fcf1.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97119650-a663ab80-16df-11eb-9802-0b7faa2cefd1.jpg"> <img width="220" src="https://user-images.githubusercontent.com/1282659/97119655-a95e9c00-16df-11eb-8f44-5fe5b61c0ec6.jpg">
 
+
 ## Work in Progress
 
 1. Scale image to fit screen.
@@ -56,6 +57,7 @@ Some noise is removed by accepting only low->high transition (no high->high, hig
 4. Highlight configuration / colors.
 5. About page.
 6. Progress bar 
+
 
 ## Configuration Details
 
@@ -80,8 +82,15 @@ target_link_libraries( # Specifies the target library.
         native-lib
 +       -ljnigraphics
 ```
+
 ### Version
 <img width="400" alt="Screen Shot 2020-10-25 at 2 56 56 PM" src="https://user-images.githubusercontent.com/1282659/97117537-65b16580-16d2-11eb-824e-f0cec35d49aa.png">
+
+
+## Sample Images (dev/test)
+A collection of photos are available in sub-directory /photos. \
+Many thanks to Buddy Reaves for photos: bud1-4. \
+All others are 'borrowed' on the world-wide-web.
 
 
 # Inspiration
@@ -112,4 +121,6 @@ https://guides.codepath.com/android/Accessing-the-Camera-and-Stored-Media
 
 5. Custom View in Android with Kotlin by Antonio Leiva  \
 https://antonioleiva.com/custom-views-android-kotlin/
+
+6. Sample tree cross section images (bud1-4), by Buddy Reaves
 
