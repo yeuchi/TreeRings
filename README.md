@@ -106,7 +106,7 @@ borrowed \
 
 
 ### Earl 'Bud' Reaves 
-After seeing many tree photos on his Facebook post, I was inspired by Bud's deligence on tracking tree age for studies. \
+After seeing many of his Facebook posts, I was intrigued by his deligence, tracking tree age for studies. \
 The prospect of automating the process might be helpful ? \
 Even a quick estimate on the field might be useful ?
 
