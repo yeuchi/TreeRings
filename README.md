@@ -90,7 +90,7 @@ target_link_libraries( # Specifies the target library.
 ## Sample Images (dev/test)
 A collection of photos are available in sub-directory /photos. \
 Many thanks to Earl 'Bud' Reaves, Maryland County Forester, for photos: bud1-4. \
-All others are 'borrowed' on the world-wide-web. \
+All others are 'borrowed' on the world-wide-web. 
 
 Only low resolution version of 'borrowed' images have been used thus far. \
 Look forward to expanding as better algorithm is devised.
