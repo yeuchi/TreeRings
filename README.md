@@ -92,7 +92,7 @@ A collection of photos are available in sub-directory /photos. \
 Many thanks to Earl 'Bud' Reaves, Maryland County Forester, for photos: bud1-4. \
 All others are 'borrowed' on the world-wide-web. \
 
-Only low resolution version of 'borrowed' images have been used thus far.
+Only low resolution version of 'borrowed' images have been used thus far. \
 Look forward to expanding as better algorithm is devised.
 
 bud1-4 \
