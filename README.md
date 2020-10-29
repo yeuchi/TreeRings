@@ -6,7 +6,7 @@ Device: Android mobile (no server backend processing)
 Camera/Gallery -> Photo -> Sobel Edge Detection -> User Selects Path -> Count Intersections -> Render 
 
 #### Navigation Graph
-<img width="500" alt="Screen Shot 2020-10-29 at 3 26 47 AM" src="https://user-images.githubusercontent.com/1282659/97543730-a0e3bb00-1996-11eb-9949-140831feb3fc.png">
+<img width="518" alt="Screen Shot 2020-10-29 at 3 49 02 AM" src="https://user-images.githubusercontent.com/1282659/97545973-c6be8f00-1999-11eb-84e0-962fe3d1fbec.png">
 
 
 ### Camera/Gallery -> Photo
