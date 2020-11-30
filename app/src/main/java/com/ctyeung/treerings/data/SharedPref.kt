@@ -69,7 +69,7 @@ object SharedPref {
 
     fun getBitmapSize():Pair<Int, Int> {
         return Pair(getInt(keyBmpWidth),
-                     getInt(keyBmpHeight))
+            getInt(keyBmpHeight))
     }
 
     fun setBitmapSize(width:Int, height:Int) {

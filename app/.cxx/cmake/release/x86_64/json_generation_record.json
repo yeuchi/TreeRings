@@ -109,6 +109,12 @@
   },
   {
     "level": "INFO",
+    "message": "Parsing /Users/ctyeung/Library/Android/sdk/build-tools/30.0.2/package.xml",
+    "file": "/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/src/main/cpp/CMakeLists.txt",
+    "tag": "release|x86_64"
+  },
+  {
+    "level": "INFO",
     "message": "Parsing /Users/ctyeung/Library/Android/sdk/cmake/3.10.2.4988404/package.xml",
     "file": "/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/src/main/cpp/CMakeLists.txt",
     "tag": "release|x86_64"

@@ -133,7 +133,8 @@ class MainFragment : Fragment() {
                             photoUri,
                             binding!!.layout!!.photo_preview)
 
-            persistBitmapAttributes()
+            SharedPref.setBitmapSize(photoStore?.bmp?.width?:0, photoStore.bmp?.height?:0)
+            SharedPref.setFilePath(SharedPref.keySrcFilePath, photoStore.imageUri.toString())
             return
         }
         Toast.makeText(this.context, "photoUri is null", Toast.LENGTH_LONG).show()
@@ -153,15 +154,10 @@ class MainFragment : Fragment() {
             if(returned != "")
                 Toast.makeText(this.context, returned, Toast.LENGTH_LONG).show()
 
-            persistBitmapAttributes()
+            SharedPref.setBitmapSize(bmp?.width?:0, bmp?.height?:0)
+            SharedPref.setFilePath(SharedPref.keySrcFilePath, photoStore.imageUri.toString())
             return
         }
         Toast.makeText(this.context, "data is null", Toast.LENGTH_LONG).show()
-    }
-
-    // persist in shared preference
-    private fun persistBitmapAttributes() {
-        SharedPref.setFilePath(SharedPref.keySrcFilePath, photoStore.imageUri.toString())
-        SharedPref.setBitmapSize(photoStore.bmp?.width?:0, photoStore.bmp?.height?:0)
     }
 }

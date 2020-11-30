@@ -8,7 +8,7 @@ class Line (val p0:PointF, val p1:PointF) {
         var p = PointF()
 
         if(isHorizontal()){
-            // overlap or parallel
+            // overlap or parallel -- never happens in TreeRing
             if( line.isHorizontal()) {
                 return null
             }
@@ -20,7 +20,7 @@ class Line (val p0:PointF, val p1:PointF) {
             }
         }
         else if (isVertical()) {
-            // overlap or parallel
+            // overlap or parallel -- never happens in TreeRing
             if ( line.isVertical()) {
                 return null
             }

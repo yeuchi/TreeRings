@@ -24,9 +24,38 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/navEditor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/navEditor.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/arm64-v8a/android_gradle_build_native-lib_arm64-v8a.stdout.txt" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/arm64-v8a/android_gradle_build_native-lib_arm64-v8a.stdout.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/MyPaperView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/MyPaperView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/arm64-v8a/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/arm64-v8a/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/arm64-v8a/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/arm64-v8a/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/armeabi-v7a/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/armeabi-v7a/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/armeabi-v7a/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/armeabi-v7a/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/native-lib.dir/Convolution.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/native-lib.dir/RingDetector.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/native-lib.dir/native-lib.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/CMakeFiles/native-lib.dir/Convolution.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/CMakeFiles/native-lib.dir/RingDetector.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86/CMakeFiles/native-lib.dir/native-lib.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86_64/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86_64/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86_64/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86_64/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86_64/CMakeFiles/native-lib.dir/Convolution.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86_64/CMakeFiles/native-lib.dir/RingDetector.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/debug/x86_64/CMakeFiles/native-lib.dir/native-lib.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/release/arm64-v8a/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/release/arm64-v8a/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/release/armeabi-v7a/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/release/armeabi-v7a/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/release/x86/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/release/x86/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/release/x86_64/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/release/x86_64/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/.cxx/cmake/release/x86_64/json_generation_record.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/.cxx/cmake/release/x86_64/json_generation_record.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/DetailFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/DetailFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/MainFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/MainFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/MyImageView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/MyImageView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/data/SharedPref.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/data/SharedPref.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/img/LIne.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/img/LIne.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,68 +200,68 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="463" y="131" key="#org.jetbrains.kotlin.idea.refactoring.move.moveDeclarations.ui.MoveKotlinTopLevelDeclarationsDialog/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1601733686533" />
-    <state width="409" height="438" key="DebuggerActiveHint" timestamp="1603652174053">
+    <state width="454" height="438" key="DebuggerActiveHint" timestamp="1606697048565">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="409" height="438" key="DebuggerActiveHint/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1603652174053" />
-    <state width="1379" height="118" key="GridCell.Tab.0.bottom" timestamp="1603661111754">
+    <state width="454" height="438" key="DebuggerActiveHint/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1606697048565" />
+    <state width="1299" height="230" key="GridCell.Tab.0.bottom" timestamp="1606699400185">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.0.bottom/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215066185" />
-    <state width="1379" height="118" key="GridCell.Tab.0.bottom/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1603661111754" />
+    <state width="1299" height="230" key="GridCell.Tab.0.bottom/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1606699400185" />
     <state width="1360" height="302" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1603213454331" />
-    <state width="1379" height="118" key="GridCell.Tab.0.center" timestamp="1603661111754">
+    <state width="1299" height="230" key="GridCell.Tab.0.center" timestamp="1606699400185">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.0.center/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215066185" />
-    <state width="1379" height="118" key="GridCell.Tab.0.center/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1603661111754" />
+    <state width="1299" height="230" key="GridCell.Tab.0.center/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1606699400185" />
     <state width="1360" height="302" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1603213454331" />
-    <state width="1379" height="118" key="GridCell.Tab.0.left" timestamp="1603661111753">
+    <state width="1299" height="230" key="GridCell.Tab.0.left" timestamp="1606699400185">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.0.left/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215066184" />
-    <state width="1379" height="118" key="GridCell.Tab.0.left/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1603661111753" />
+    <state width="1299" height="230" key="GridCell.Tab.0.left/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1606699400185" />
     <state width="1360" height="302" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1603213454331" />
-    <state width="1379" height="118" key="GridCell.Tab.0.right" timestamp="1603661111754">
+    <state width="1299" height="230" key="GridCell.Tab.0.right" timestamp="1606699400185">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.0.right/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215066185" />
-    <state width="1379" height="118" key="GridCell.Tab.0.right/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1603661111754" />
+    <state width="1299" height="230" key="GridCell.Tab.0.right/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1606699400185" />
     <state width="1360" height="302" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1603213454331" />
-    <state width="1379" height="118" key="GridCell.Tab.1.bottom" timestamp="1603661111701">
+    <state width="1299" height="230" key="GridCell.Tab.1.bottom" timestamp="1606699400186">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.1.bottom/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215060255" />
-    <state width="1379" height="118" key="GridCell.Tab.1.bottom/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1603661111701" />
+    <state width="1299" height="230" key="GridCell.Tab.1.bottom/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1606699400186" />
     <state width="1360" height="302" key="GridCell.Tab.1.bottom/0.23.1440.877@0.23.1440.877" timestamp="1603213454332" />
-    <state width="1379" height="118" key="GridCell.Tab.1.center" timestamp="1603661111701">
+    <state width="1299" height="230" key="GridCell.Tab.1.center" timestamp="1606699400186">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.1.center/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215060254" />
-    <state width="1379" height="118" key="GridCell.Tab.1.center/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1603661111701" />
+    <state width="1299" height="230" key="GridCell.Tab.1.center/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1606699400186" />
     <state width="1360" height="302" key="GridCell.Tab.1.center/0.23.1440.877@0.23.1440.877" timestamp="1603213454332" />
-    <state width="1379" height="118" key="GridCell.Tab.1.left" timestamp="1603661111701">
+    <state width="1299" height="230" key="GridCell.Tab.1.left" timestamp="1606699400186">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.1.left/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215060254" />
-    <state width="1379" height="118" key="GridCell.Tab.1.left/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1603661111701" />
+    <state width="1299" height="230" key="GridCell.Tab.1.left/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1606699400186" />
     <state width="1360" height="302" key="GridCell.Tab.1.left/0.23.1440.877@0.23.1440.877" timestamp="1603213454332" />
-    <state width="1379" height="118" key="GridCell.Tab.1.right" timestamp="1603661111701">
+    <state width="1299" height="230" key="GridCell.Tab.1.right" timestamp="1606699400186">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="1137" height="239" key="GridCell.Tab.1.right/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600215060255" />
-    <state width="1379" height="118" key="GridCell.Tab.1.right/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1603661111701" />
+    <state width="1299" height="230" key="GridCell.Tab.1.right/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1606699400186" />
     <state width="1360" height="302" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1603213454332" />
-    <state x="435" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1602961274370">
+    <state x="337" y="272" key="com.intellij.ide.util.TipDialog" timestamp="1606334491171">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="483" y="-606" key="com.intellij.ide.util.TipDialog/0.23.1440.877/0.-877.1600.877@0.-877.1600.877" timestamp="1600131460538" />
-    <state x="435" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1601690846043" />
-    <state x="435" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1602961274370" />
-    <state x="381" y="213" width="693" height="488" key="find.popup" timestamp="1602426437803">
+    <state x="435" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1603959900136" />
+    <state x="337" y="272" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1606334491171" />
+    <state x="381" y="213" width="850" height="488" key="find.popup" timestamp="1606696587738">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="381" y="213" width="693" height="488" key="find.popup/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1601823786256" />
+    <state x="381" y="213" width="850" height="488" key="find.popup/0.23.1440.877/0.-877.1600.877@0.23.1440.877" timestamp="1606696587738" />
     <state x="381" y="213" width="693" height="488" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1602426437803" />
     <state x="370" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1601854124232">
       <screen x="0" y="23" width="1440" height="877" />
@@ -247,16 +276,18 @@
           <line>64</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/ctyeung/treerings/MainFragment.kt</url>
-          <line>144</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/app/src/main/cpp/RingDetector.cpp</url>
           <line>69</line>
           <option name="timeStamp" value="48" />
         </line-breakpoint>
+        <breakpoint enabled="true" suspend="THREAD" type="OCSymbolicBreakpointType">
+          <properties>
+            <option name="moduleName" value="libart.so" />
+            <option name="symbolPattern" value="art_sigsegv_fault" />
+          </properties>
+          <option name="timeStamp" value="79" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -278,6 +309,9 @@
         <watch expression="listPoints[0]" language="kotlin" />
         <watch expression="listPoints[1]" language="kotlin" />
         <watch expression="lineIntersects" language="kotlin" />
+        <watch expression="lineIntersects.size" language="kotlin" />
+        <watch expression="photoStore.bmp" language="kotlin" />
+        <watch expression="photoStore.imageUri" language="kotlin" />
       </configuration>
     </watches-manager>
   </component>

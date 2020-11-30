@@ -80,3 +80,9 @@
 5	276	1603036551	CMakeFiles/native-lib.dir/Convolution.cpp.o	d2af2e708cccdbae
 5	866	1603036552	CMakeFiles/native-lib.dir/native-lib.cpp.o	d75ed53d9984c4c8
 866	942	1603036552	/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	78413be4f9970670
+0	9	0	clean	e5725e59067cfa2f
+5	363	1606695812	CMakeFiles/native-lib.dir/RingDetector.cpp.o	f52bebca2cd78ccc
+6	367	1606695812	CMakeFiles/native-lib.dir/Convolution.cpp.o	d2af2e708cccdbae
+7	898	1606695812	CMakeFiles/native-lib.dir/native-lib.cpp.o	d75ed53d9984c4c8
+898	1047	1606695812	/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	78413be4f9970670
+0	9	0	clean	e5725e59067cfa2f

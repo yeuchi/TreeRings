@@ -22,8 +22,6 @@ class MyImageView :androidx.appcompat.widget.AppCompatImageView {
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-
-        if(screenWidth != this.measuredWidth || screenHeight != this.measuredHeight)
-            SharedPref.setImageViewSize(this.measuredWidth, this.measuredHeight)
+        SharedPref.setImageViewSize(this.measuredWidth, this.measuredHeight)
     }
 }
