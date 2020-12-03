@@ -79,8 +79,7 @@ class DetailFragment : BaseFragment(), IOnNewLine {
         val builder = AlertDialog.Builder(this.context)
         builder.setTitle("Count Rings")
             .setMessage("Draw an intersecting line across rings to count.")
-            .create()
-            .show()
+            .setPositiveButton("yes") { _, _ -> }.create().show()
     }
 
     private fun getScreenSize():Pair<Int, Int> {

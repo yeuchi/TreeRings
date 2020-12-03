@@ -81,8 +81,8 @@ class PhotoFragment : BaseFragment() {
         val builder = AlertDialog.Builder(this.context)
         builder.setTitle("Identify Rings")
             .setMessage("Adjust threshold to identify rings.")
-            .create()
-            .show()
+            .setCancelable(false)
+            .setPositiveButton("yes") { _, _ -> }.create().show()
     }
 
     /*
