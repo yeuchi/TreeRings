@@ -1,4 +1,4 @@
-# TreeRings
+# TreeRings (dendroecology)
 Challenge: count tree rings from a photo. \
 Device: Android mobile (no server backend processing)
 
