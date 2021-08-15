@@ -1,6 +1,6 @@
 # TreeRings (dendroecology)
 Challenge: count tree rings from a photo. \
-Device: Android mobile (no server backend processing)
+Device: Android mobile (no server backend processing) \
 Goog Play Store: https://play.google.com/store/apps/details?id=com.ctyeung.treerings
 
 ### Application Workflow 
