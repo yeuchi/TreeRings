@@ -87,6 +87,15 @@ target_link_libraries( # Specifies the target library.
 ### Version
 <img width="400" alt="Screen Shot 2020-10-25 at 2 56 56 PM" src="https://user-images.githubusercontent.com/1282659/97117537-65b16580-16d2-11eb-824e-f0cec35d49aa.png">
 
+### Version 2.0 on Google Play
+
+1. Main Page: add background image and instruction.
+<img width="400" src="https://user-images.githubusercontent.com/1282659/129494098-06dee2e7-9d13-4672-bdb2-23785ff4a65e.jpg">
+
+2. Count Page: add white background to count value - legibility.
+<img width="400" src="https://user-images.githubusercontent.com/1282659/129494101-a4cd0f4c-0f4c-43f4-a1d7-a248b031215e.jpg">
+
+
 
 ## Sample Images (dev/test)
 A collection of photos are available in sub-directory /photos. \
