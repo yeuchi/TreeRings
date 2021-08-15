@@ -90,10 +90,8 @@ target_link_libraries( # Specifies the target library.
 ### Version 2.0 on Google Play
 
 1. Main Page: add background image and instruction.
-<img height="400" src="https://user-images.githubusercontent.com/1282659/129494098-06dee2e7-9d13-4672-bdb2-23785ff4a65e.jpg">
-
 2. Count Page: add white background to count value - legibility.
-<img height="400" src="https://user-images.githubusercontent.com/1282659/129494101-a4cd0f4c-0f4c-43f4-a1d7-a248b031215e.jpg">
+<img height="400" src="https://user-images.githubusercontent.com/1282659/129494098-06dee2e7-9d13-4672-bdb2-23785ff4a65e.jpg"> <img height="400" src="https://user-images.githubusercontent.com/1282659/129494101-a4cd0f4c-0f4c-43f4-a1d7-a248b031215e.jpg">
 
 
 
