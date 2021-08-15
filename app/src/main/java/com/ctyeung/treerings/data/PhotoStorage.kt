@@ -144,7 +144,7 @@ class PhotoStorage(val context:Context) {
         if(imageUri != null) {
             val timeoutMillis = 48 * DateUtils.HOUR_IN_MILLIS
             val values = ContentValues()
-            values.put(MediaColumns.IS_TRASHED, 1)
+         //   values.put(MediaColumns.IS_TRASHED, 1)
             values.put(MediaColumns.DATE_EXPIRES, (System.currentTimeMillis() + timeoutMillis) / 1000)
             context.contentResolver.update(imageUri!!, values, null, null)
             // hold on for test evaluation only
@@ -195,7 +195,7 @@ class PhotoStorage(val context:Context) {
     fun untrashLast(contentResolver: ContentResolver) {
         if(trashImageUri != null) {
             values = ContentValues();
-            values!!.put(MediaColumns.IS_TRASHED, 0);
+        //    values!!.put(MediaColumns.IS_TRASHED, 0);
             values!!.putNull(MediaColumns.DATE_EXPIRES);
             context.getContentResolver().update(trashImageUri!!, values, null, null);
 

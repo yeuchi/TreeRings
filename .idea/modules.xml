@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TreeRings.iml" filepath="$PROJECT_DIR$/.idea/modules/TreeRings.iml" group="TreeRings" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="TreeRings/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TreeRings.iml" filepath="$PROJECT_DIR$/.idea/modules/TreeRings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/TreeRings.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/TreeRings.app.iml" />
     </modules>
   </component>
 </project>

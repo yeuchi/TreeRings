@@ -17,8 +17,11 @@ class MyPaperView :View {
         context,
         attrs,
         defStyleAttr
-    ) {
+    ) {}
 
+    companion object {
+        const val RADIUS = 40F
+        const val OFFSET = 20
     }
 
     // defines paint and canvas
@@ -169,6 +172,7 @@ class MyPaperView :View {
             listPoints[1]
         }
 
+        drawTextBackground(pp, canvas)
         drawText(count.toString(), pp, canvas)
     }
 
@@ -190,12 +194,19 @@ class MyPaperView :View {
         canvas?.drawCircle(p.x, p.y, 5F, paint);
     }
 
+    private fun drawTextBackground(p:PointF, canvas: Canvas) {
+        val paint = Paint()
+        paint.isAntiAlias = true
+        paint.color = Color.WHITE
+        canvas.drawCircle(p.x, p.y, RADIUS, paint)
+    }
+
     private fun drawText(text:String, p:PointF, canvas: Canvas) {
         val paint = Paint()
-        paint.textSize = 40F
+        paint.textSize = RADIUS
         paint.isAntiAlias = true
         paint.color = Color.BLUE
-        canvas.drawText(text, p.x, p.y, paint)
+        canvas.drawText(text, p.x-OFFSET, p.y+OFFSET, paint)
     }
 
     private fun drawLine(p1: PointF,

@@ -61,6 +61,7 @@ class PhotoFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         (activity as MainActivity).setTittle("Processing")
+
         binding!!.layout!!.line_container!!.addView(this.paper)
 
         if(photoUri != null) {

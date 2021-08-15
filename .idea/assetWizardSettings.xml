@@ -14,8 +14,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="ic_navigate_next_24px" />
-                            <entry key="sourceFile" value="$USER_HOME$/Downloads/navigate_next-24px.svg" />
+                            <entry key="outputName" value="ic_treering" />
+                            <entry key="sourceFile" value="$PROJECT_DIR$/assets/treeRing.svg" />
                           </map>
                         </option>
                       </PersistentState>

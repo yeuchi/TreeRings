@@ -15,6 +15,27 @@
     android:layout_height="match_parent"
     tools:context=".MainFragment">
 
+    <LinearLayout
+        android:id="@+id/background_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Camera or Gallery"/>
+
+        <ImageView
+            android:id="@+id/background_image"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/ic_treering"/>
+
+    </LinearLayout>
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -22,7 +43,7 @@
         <ImageView
             android:id="@+id/photo_preview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"/>
 
     </RelativeLayout>
 
