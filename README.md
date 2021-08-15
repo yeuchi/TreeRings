@@ -1,6 +1,7 @@
-# TreeRings
+# TreeRings (dendroecology)
 Challenge: count tree rings from a photo. \
 Device: Android mobile (no server backend processing)
+Goog Play Store: https://play.google.com/store/apps/details?id=com.ctyeung.treerings
 
 ### Application Workflow 
 Camera/Gallery -> Photo -> Sobel Edge Detection -> User Selects Path -> Count Intersections -> Render 
