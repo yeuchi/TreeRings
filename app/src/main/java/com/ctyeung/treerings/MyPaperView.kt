@@ -148,16 +148,13 @@ class MyPaperView :View {
                     var horizon = Line(PointF(0F, y), PointF(size.first.toFloat(), y))
                     var p = userLine.findIntersect(horizon)
 
-                    /*
-                     * TODO: replace with normal line
-                     */
                     if(p != null) {
                         count ++
                         val color = if(i%10==0)Color.BLACK else Color.BLUE
-                        val w = if(i%10==0)20 else 10
-                        val p1: PointF = PointF(p.x - w, p.y)
-                        val p2: PointF = PointF(p.x + w, p.y)
-                        drawLine(p1, p2, canvas, color)
+                        val w = 20
+                        val normal = userLine.findNormalLineFrom(p)
+                        val pp = normal.findPointsDistance(w.toFloat())
+                        drawLine(pp.first, pp.second, canvas, color)
                     }
                 }
             }
