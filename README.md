@@ -98,8 +98,7 @@ target_link_libraries( # Specifies the target library.
 
 1. Draw Line Page: draw normal lines in tangent to user's specified line (previous horizontal).
 
-<img height="400" src="https://user-images.githubusercontent.com/1282659/130367900-24cacb3b-9724-420e-9e8b-9db41a9d84c4.jpg">
-
+<img height="400" src="https://user-images.githubusercontent.com/1282659/130367900-24cacb3b-9724-420e-9e8b-9db41a9d84c4.jpg"> <img height="400" src="https://user-images.githubusercontent.com/1282659/130367983-b9a8753a-979e-4841-94d3-7a73b962080d.jpg">
 
 ## Sample Images (dev/test)
 A collection of photos are available in sub-directory /photos. \
