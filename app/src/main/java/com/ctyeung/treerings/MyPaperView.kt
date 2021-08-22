@@ -110,7 +110,7 @@ class MyPaperView :View {
                 if(listPoints.size>0 && listPoints[0].y < p.y){
                     listPoints.add(0, p)
                 }
-                listPoints?.add(p)
+                listPoints.add(p)
             }
 
             else -> {   // 2 is the max supported - find nearest, replace, draw line
@@ -134,19 +134,19 @@ class MyPaperView :View {
 
        // val points = getCartesian(listPoints, lineIntersects)
         var isTransition = true
-        var userLine = Line(listPoints[0], listPoints[1])
+        val userLine = Line(listPoints[0], listPoints[1])
         val scaler = getRatio()
         var count = 0
-        var size = SharedPref.getImageViewSize()
+        val size = SharedPref.getImageViewSize()
 
         for(i in 0 .. lineIntersects.size-1) {
             if(1 == lineIntersects[i]) {
                 if(true == isTransition) {
                     isTransition = false
 
-                    var y = (listPoints[0].y + (i / scaler.second)).toFloat()
-                    var horizon = Line(PointF(0F, y), PointF(size.first.toFloat(), y))
-                    var p = userLine.findIntersect(horizon)
+                    val y = (listPoints[0].y + (i / scaler.second)).toFloat()
+                    val horizon = Line(PointF(0F, y), PointF(size.first.toFloat(), y))
+                    val p = userLine.findIntersect(horizon)
 
                     if(p != null) {
                         count ++
@@ -188,7 +188,7 @@ class MyPaperView :View {
         val paint = Paint()
         paint.style = Paint.Style.FILL
         paint.color = Color.BLACK
-        canvas?.drawCircle(p.x, p.y, 5F, paint);
+        canvas.drawCircle(p.x, p.y, 5F, paint);
     }
 
     private fun drawTextBackground(p:PointF, canvas: Canvas) {
@@ -217,7 +217,7 @@ class MyPaperView :View {
         paint.strokeJoin = Paint.Join.ROUND
         paint.strokeCap = Paint.Cap.ROUND
         paint.color = color!!
-        canvas?.drawLine(p1.x, p1.y, p2.x, p2.y, paint)
+        canvas.drawLine(p1.x, p1.y, p2.x, p2.y, paint)
     }
 
     private fun updateLine(p: PointF) {

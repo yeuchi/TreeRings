@@ -54,10 +54,10 @@ class MainFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_main, container, false)
         binding.layout = this;
-        return binding!!.root;
+        return binding.root;
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -100,8 +100,8 @@ class MainFragment : Fragment() {
     fun onClickNext() {
         if(photoStore.imageUri != null) {
             val str = photoStore.imageUri.toString() ?: ""
-            var bundle = bundleOf("url" to str)
-            binding!!.root.findNavController().navigate(R.id.action_mainFragment_to_photoFragment, bundle)
+            val bundle = bundleOf("url" to str)
+            binding.root.findNavController().navigate(R.id.action_mainFragment_to_photoFragment, bundle)
             return
         }
         Toast.makeText(this.context, "Select photo first", Toast.LENGTH_LONG).show()
@@ -131,9 +131,9 @@ class MainFragment : Fragment() {
         if(photoUri != null) {
             photoStore.read(requireActivity().contentResolver,
                             photoUri,
-                            binding!!.layout!!.photo_preview)
+                            binding.layout!!.photo_preview)
 
-            SharedPref.setBitmapSize(photoStore?.bmp?.width?:0, photoStore.bmp?.height?:0)
+            SharedPref.setBitmapSize(photoStore.bmp?.width?:0, photoStore.bmp?.height?:0)
             SharedPref.setFilePath(SharedPref.keySrcFilePath, photoStore.imageUri.toString())
             return
         }
@@ -143,18 +143,18 @@ class MainFragment : Fragment() {
     fun handleTakePhoto(data: Intent?) {
         var bmp: Bitmap?=null
 
-        if (data != null && data?.extras != null) {
-            bmp = data?.extras?.get("data") as Bitmap
+        if (data != null && data.extras != null) {
+            bmp = data.extras?.get("data") as Bitmap
             bmp = BitmapUtils.setPortrait(bmp)
 
-            binding?.layout?.photo_preview?.setImageBitmap(bmp!!)
+            binding.layout?.photo_preview?.setImageBitmap(bmp)
             photoStore.setNames("original", "treerings")
-            val returned = photoStore.save(bmp!!)
+            val returned = photoStore.save(bmp)
 
             if(returned != "")
                 Toast.makeText(this.context, returned, Toast.LENGTH_LONG).show()
 
-            SharedPref.setBitmapSize(bmp?.width?:0, bmp?.height?:0)
+            SharedPref.setBitmapSize(bmp.width?:0, bmp.height?:0)
             SharedPref.setFilePath(SharedPref.keySrcFilePath, photoStore.imageUri.toString())
             return
         }

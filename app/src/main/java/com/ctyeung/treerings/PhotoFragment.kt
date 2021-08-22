@@ -46,10 +46,10 @@ class PhotoFragment : BaseFragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_photo, container, false)
         binding.layout = this;
-        return binding!!.root;
+        return binding.root;
     }
 
     protected var bmpIn:Bitmap? = null
@@ -62,14 +62,14 @@ class PhotoFragment : BaseFragment() {
 
         (activity as MainActivity).setTittle("Processing")
 
-        binding!!.layout!!.line_container!!.addView(this.paper)
+        binding.layout!!.line_container!!.addView(this.paper)
 
         if(photoUri != null) {
             bmpIn = photoStore.load(requireActivity().contentResolver, photoUri!!)
             if(bmpIn != null) {
                 this.kernel = KernelFactory.create(KernelType.TYPE_XY45_DERIVATIVE)
                 this.bmpOut = BitmapUtils.create(bmpIn!!)
-                val photoEdges = binding!!.layout!!.photo_view
+                val photoEdges = binding.layout!!.photo_view
                 photoEdges.setImageBitmap(bmpOut)
                 detectEdges(thresholdValue)
                 showAlertDialog()
@@ -102,7 +102,7 @@ class PhotoFragment : BaseFragment() {
     }
 
     fun handleSeekBar() {
-        val seek = binding!!.layout!!.seekbar
+        val seek = binding.layout.seekbar
         seek?.progress = this.thresholdValue
         seek?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
 
@@ -147,7 +147,7 @@ class PhotoFragment : BaseFragment() {
     }
 
     override fun onBackPressed(): Boolean {
-        binding!!.root.findNavController().navigate(R.id.action_photoFragment_to_mainFragment)
+        binding.root.findNavController().navigate(R.id.action_photoFragment_to_mainFragment)
         return true
     }
 
@@ -158,8 +158,8 @@ class PhotoFragment : BaseFragment() {
             persistBitmapLines()
 
             val str = photoStore.imageUri.toString() ?: ""
-            var bundle = bundleOf("url" to str)
-            binding!!.root.findNavController()
+            val bundle = bundleOf("url" to str)
+            binding.root.findNavController()
                 .navigate(R.id.action_photoFragment_to_detailFragment, bundle)
         }
     }
