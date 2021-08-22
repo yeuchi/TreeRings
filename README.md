@@ -94,6 +94,11 @@ target_link_libraries( # Specifies the target library.
 
 <img height="400" src="https://user-images.githubusercontent.com/1282659/129494098-06dee2e7-9d13-4672-bdb2-23785ff4a65e.jpg"> <img height="400" src="https://user-images.githubusercontent.com/1282659/129494101-a4cd0f4c-0f4c-43f4-a1d7-a248b031215e.jpg">
 
+### Version 3.0 on Google Play
+
+1. Draw Line Page: draw normal lines in tangent to user's specified line (previous horizontal).
+
+<img height="400" src="https://user-images.githubusercontent.com/1282659/130367900-24cacb3b-9724-420e-9e8b-9db41a9d84c4.jpg">
 
 
 ## Sample Images (dev/test)
