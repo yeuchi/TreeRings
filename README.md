@@ -94,6 +94,19 @@ target_link_libraries( # Specifies the target library.
 
 <img height="400" src="https://user-images.githubusercontent.com/1282659/129494098-06dee2e7-9d13-4672-bdb2-23785ff4a65e.jpg"> <img height="400" src="https://user-images.githubusercontent.com/1282659/129494101-a4cd0f4c-0f4c-43f4-a1d7-a248b031215e.jpg">
 
+### Version 3.0 on Google Play
+
+1. Draw Line Page: draw normal lines in tangent to user's specified line (previous horizontal).
+
+<img height="400" src="https://user-images.githubusercontent.com/1282659/130367900-24cacb3b-9724-420e-9e8b-9db41a9d84c4.jpg"> <img height="400" src="https://user-images.githubusercontent.com/1282659/130367983-b9a8753a-979e-4841-94d3-7a73b962080d.jpg">
+
+Slope intercept: \
+<img width="120" src="https://user-images.githubusercontent.com/1282659/130368524-358a666b-2782-4080-b221-223625f5c7f8.png">
+
+<img width="170" src="https://user-images.githubusercontent.com/1282659/130368528-260f5c0e-e274-4c52-a16a-91fe9b2ce63d.png">
+
+Substitude into distance equation: \
+<img width="300" src="https://user-images.githubusercontent.com/1282659/130368530-45e75e89-fad9-4c7d-8595-f8cf5caf36c7.png">
 
 
 ## Sample Images (dev/test)
@@ -149,4 +162,7 @@ https://guides.codepath.com/android/Accessing-the-Camera-and-Stored-Media
 https://antonioleiva.com/custom-views-android-kotlin/
 
 6. Sample tree cross section images (bud1-4), by Earl Bud Reaves, County Forester, Anne Arundel County, MD
+
+7. Mathematics: "How do I find a point a given distance from another point along a line?" by John Douma, June 2, 2013 \
+https://math.stackexchange.com/questions/409689/how-do-i-find-a-point-a-given-distance-from-another-point-along-a-line/409721
 
