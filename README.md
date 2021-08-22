@@ -105,7 +105,7 @@ Slope intercept: \
 
 <img width="170" src="https://user-images.githubusercontent.com/1282659/130368528-260f5c0e-e274-4c52-a16a-91fe9b2ce63d.png">
 
-Distance: \
+Substitude into distance equation: \
 <img width="300" src="https://user-images.githubusercontent.com/1282659/130368530-45e75e89-fad9-4c7d-8595-f8cf5caf36c7.png">
 
 
