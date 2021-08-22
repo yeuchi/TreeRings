@@ -154,3 +154,6 @@ https://antonioleiva.com/custom-views-android-kotlin/
 
 6. Sample tree cross section images (bud1-4), by Earl Bud Reaves, County Forester, Anne Arundel County, MD
 
+7. Mathematics: "How do I find a point a given distance from another point along a line?" by John Douma, June 2, 2013 \
+https://math.stackexchange.com/questions/409689/how-do-i-find-a-point-a-given-distance-from-another-point-along-a-line/409721
+
