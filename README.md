@@ -108,6 +108,10 @@ Slope intercept: <sup>[7]</sup> \
 Substitude into distance equation: <sup>[7]</sup> \
 <img width="300" src="https://user-images.githubusercontent.com/1282659/130368530-45e75e89-fad9-4c7d-8595-f8cf5caf36c7.png">
 
+### Version 4.0 on Google Play 
+
+1. Portrait mode only - so image does not get lost.
+
 
 ## Sample Images (dev/test)
 A collection of photos are available in sub-directory /photos. \
