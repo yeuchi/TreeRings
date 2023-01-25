@@ -81,7 +81,7 @@ object SharedPref {
         setInt(keyBmpHeight, height)
     }
 
-    private fun getFilePath(key:String?=keySrcFilePath):String
+    fun getFilePath(key:String?=keySrcFilePath):String
     {
         return getString(
             key!!,

@@ -102,7 +102,7 @@ class PhotoFragment : BaseFragment() {
     }
 
     fun handleSeekBar() {
-        val seek = binding.layout.seekbar
+        val seek = binding.layout?.seekbar
         seek?.progress = this.thresholdValue
         seek?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
 
