@@ -100,13 +100,17 @@ target_link_libraries( # Specifies the target library.
 
 <img height="400" src="https://user-images.githubusercontent.com/1282659/130367900-24cacb3b-9724-420e-9e8b-9db41a9d84c4.jpg"> <img height="400" src="https://user-images.githubusercontent.com/1282659/130367983-b9a8753a-979e-4841-94d3-7a73b962080d.jpg">
 
-Slope intercept: \
+Slope intercept: <sup>[7]</sup> \
 <img width="120" src="https://user-images.githubusercontent.com/1282659/130368524-358a666b-2782-4080-b221-223625f5c7f8.png">
 
 <img width="170" src="https://user-images.githubusercontent.com/1282659/130368528-260f5c0e-e274-4c52-a16a-91fe9b2ce63d.png">
 
-Substitude into distance equation: \
+Substitude into distance equation: <sup>[7]</sup> \
 <img width="300" src="https://user-images.githubusercontent.com/1282659/130368530-45e75e89-fad9-4c7d-8595-f8cf5caf36c7.png">
+
+### Version 4.0 on Google Play 
+
+1. Portrait mode only - so image does not get lost.
 
 
 ## Sample Images (dev/test)
