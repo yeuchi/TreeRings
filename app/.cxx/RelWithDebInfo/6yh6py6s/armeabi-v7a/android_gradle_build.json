@@ -1,0 +1,38 @@
+{
+  "buildFiles": [
+    "/Users/ctyeung/Desktop/TreeRings/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/ctyeung/Library/Android/sdk/cmake/3.18.1/bin/ninja",
+      "-C",
+      "/Users/ctyeung/Desktop/TreeRings/app/.cxx/RelWithDebInfo/6yh6py6s/armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/ctyeung/Library/Android/sdk/cmake/3.18.1/bin/ninja",
+    "-C",
+    "/Users/ctyeung/Desktop/TreeRings/app/.cxx/RelWithDebInfo/6yh6py6s/armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "native-lib::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "armeabi-v7a",
+      "artifactName": "native-lib",
+      "output": "/Users/ctyeung/Desktop/TreeRings/app/build/intermediates/cxx/RelWithDebInfo/6yh6py6s/obj/armeabi-v7a/libnative-lib.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/Users/ctyeung/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+      "cppCompilerExecutable": "/Users/ctyeung/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

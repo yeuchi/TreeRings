@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setHomeButtonEnabled(true)
 
         // Example of a call to a native method
-       // sample_text.text = stringFromJNI()
+        // sample_text.text = stringFromJNI()
     }
 
     fun enableBackButton(show:Boolean) {
@@ -49,7 +49,7 @@ class MainActivity : AppCompatActivity() {
      * A native method that is implemented by the 'native-lib' native library,
      * which is packaged with this application.
      */
-   // external fun stringFromJNI(): String
+    // external fun stringFromJNI(): String
 
     companion object {
         // Used to load the 'native-lib' library on application startup.
@@ -70,8 +70,8 @@ class MainActivity : AppCompatActivity() {
 
         } catch (ex: java.lang.Exception) {
             Toast.makeText(this,
-                    ex.toString() as String,
-                    Toast.LENGTH_LONG).show()
+                ex.toString() as String,
+                Toast.LENGTH_LONG).show()
         }
     }
     external fun imageConvolveFromJNI(bmpIn: Bitmap?,
@@ -109,10 +109,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         imageFindIntersectsFromJNI( bmp,
-                                    lineIntersets,
-                                    lineIntersets!!.size,
-                                    x0, y0,
-                                    x1, y1)
+            lineIntersets,
+            lineIntersets!!.size,
+            x0, y0,
+            x1, y1)
     }
 
     external fun imageFindIntersectsFromJNI(bmpIn: Bitmap?, lineIntersets:IntArray?, len:Int, x0:Int, y0:Int, x1:Int, y1:Int)

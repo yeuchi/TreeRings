@@ -17,7 +17,6 @@ import com.ctyeung.treerings.img.BitmapUtils
 import com.ctyeung.treerings.img.Kernel
 import com.ctyeung.treerings.img.KernelFactory
 import com.ctyeung.treerings.img.KernelType
-import kotlinx.android.synthetic.main.fragment_photo.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -62,14 +61,14 @@ class PhotoFragment : BaseFragment() {
 
         (activity as MainActivity).setTittle("Processing")
 
-        binding.layout!!.line_container!!.addView(this.paper)
+        binding.lineContainer.addView(this.paper)
 
         if(photoUri != null) {
             bmpIn = photoStore.load(requireActivity().contentResolver, photoUri!!)
             if(bmpIn != null) {
                 this.kernel = KernelFactory.create(KernelType.TYPE_XY45_DERIVATIVE)
                 this.bmpOut = BitmapUtils.create(bmpIn!!)
-                val photoEdges = binding.layout!!.photo_view
+                val photoEdges = binding.photoView
                 photoEdges.setImageBitmap(bmpOut)
                 detectEdges(thresholdValue)
                 showAlertDialog()
@@ -102,9 +101,9 @@ class PhotoFragment : BaseFragment() {
     }
 
     fun handleSeekBar() {
-        val seek = binding.layout?.seekbar
-        seek?.progress = this.thresholdValue
-        seek?.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+        val seek = binding.seekbar
+        seek.progress = this.thresholdValue
+        seek.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
 
             override fun onProgressChanged(seek: SeekBar,
                                            progress: Int,
@@ -117,7 +116,8 @@ class PhotoFragment : BaseFragment() {
             override fun onStopTrackingTouch(seek: SeekBar) {
                 if(thresholdValue !== seek.progress) {
                     thresholdValue = seek.progress
-                    txtSeekValue.text = seek.progress.toString()
+
+                    binding.txtSeekValue.text = seek.progress.toString()
                     //seek.isIndeterminate = true
                     detectEdges(thresholdValue)
                     //seek.isIndeterminate = false

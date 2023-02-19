@@ -16,10 +16,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.ctyeung.treerings.data.SharedPref
 import com.ctyeung.treerings.databinding.FragmentDetailBinding
-import kotlinx.android.synthetic.main.fragment_detail.*
-import kotlinx.android.synthetic.main.fragment_photo.*
-import kotlinx.android.synthetic.main.fragment_photo.line_container
-import kotlinx.android.synthetic.main.fragment_photo.photo_view
 import java.util.ArrayList
 
 // TODO: Rename parameter arguments, choose names that match
@@ -54,17 +50,17 @@ class DetailFragment : BaseFragment(), IOnNewLine {
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_detail, container, false)
         binding.layout = this;
-        return binding!!.root;
+        return binding.root;
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         (activity as MainActivity).setTittle("Draw Line")
-        binding!!.layout!!.line_container!!.addView(this.paper)
+        binding.lineContainer.addView(this.paper)
 
         if(photoUri != null) {
-            loadPhoto(binding!!.layout!!.photo_view, photoUri)
+            loadPhoto(binding.photoView, photoUri)
             // TODO display an alertDialog for tutorial
 
             val size = getScreenSize()
@@ -110,7 +106,7 @@ class DetailFragment : BaseFragment(), IOnNewLine {
     }
 
     override fun onBackPressed(): Boolean {
-        binding!!.root.findNavController().navigate(R.id.action_photoFragment_to_mainFragment)
+        binding.root.findNavController().navigate(R.id.action_photoFragment_to_mainFragment)
         return true
     }
 

@@ -17,7 +17,6 @@ import com.ctyeung.treerings.data.PhotoStorage
 import com.ctyeung.treerings.data.SharedPref
 import com.ctyeung.treerings.databinding.FragmentMainBinding
 import com.ctyeung.treerings.img.BitmapUtils
-import kotlinx.android.synthetic.main.fragment_main.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -131,7 +130,7 @@ class MainFragment : Fragment() {
         if(photoUri != null) {
             photoStore.read(requireActivity().contentResolver,
                             photoUri,
-                            binding.layout!!.photo_preview)
+                            binding.photoPreview)
 
             SharedPref.setBitmapSize(photoStore.bmp?.width?:0, photoStore.bmp?.height?:0)
             SharedPref.setFilePath(SharedPref.keySrcFilePath, photoStore.imageUri.toString())
@@ -145,18 +144,21 @@ class MainFragment : Fragment() {
 
         if (data != null && data.extras != null) {
             bmp = data.extras?.get("data") as Bitmap
-            bmp = BitmapUtils.setPortrait(bmp)
+            val context = this.context
+            bmp?.apply {
+                val bitmap = BitmapUtils.setPortrait(this)
 
-            binding.layout?.photo_preview?.setImageBitmap(bmp)
-            photoStore.setNames("original", "treerings")
-            val returned = photoStore.save(bmp)
+                binding.photoPreview.setImageBitmap(bitmap)
+                photoStore.setNames("original", "treerings")
+                val returned = photoStore.save(bitmap)
 
-            if(returned != "")
-                Toast.makeText(this.context, returned, Toast.LENGTH_LONG).show()
+                if(returned != "")
+                    Toast.makeText(context, returned, Toast.LENGTH_LONG).show()
 
-            SharedPref.setBitmapSize(bmp.width?:0, bmp.height?:0)
-            SharedPref.setFilePath(SharedPref.keySrcFilePath, photoStore.imageUri.toString())
-            return
+                SharedPref.setBitmapSize(bitmap.width?:0, bitmap.height?:0)
+                SharedPref.setFilePath(SharedPref.keySrcFilePath, photoStore.imageUri.toString())
+                return
+            }
         }
         Toast.makeText(this.context, "data is null", Toast.LENGTH_LONG).show()
     }

@@ -1,0 +1,2 @@
+ninja: Entering directory `/Users/ctyeung/Desktop/TreeRings/app/.cxx/RelWithDebInfo/6yh6py6s/armeabi-v7a'
+ninja: no work to do.
