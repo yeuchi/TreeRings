@@ -1,0 +1,5 @@
+ninja: Entering directory `/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/.cxx/Debug/3bjk2g1j/x86_64'
+[1/4] Building CXX object CMakeFiles/native-lib.dir/RingDetector.cpp.o
+[2/4] Building CXX object CMakeFiles/native-lib.dir/Convolution.cpp.o
+[3/4] Building CXX object CMakeFiles/native-lib.dir/native-lib.cpp.o
+[4/4] Linking CXX shared library /Users/ctyeung/Documents/GitHub/Android/TreeRings/app/build/intermediates/cxx/Debug/3bjk2g1j/obj/x86_64/libnative-lib.so

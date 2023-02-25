@@ -1,0 +1,5 @@
+# ninja log v5
+0	139	1677350639	CMakeFiles/native-lib.dir/RingDetector.cpp.o	bf2d63edbb89bee3
+2	147	1677350639	CMakeFiles/native-lib.dir/Convolution.cpp.o	29d31626b9b681f8
+3	1664	1677350640	CMakeFiles/native-lib.dir/native-lib.cpp.o	64329c001056dd04
+1665	1805	1677350640	/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/build/intermediates/cxx/Debug/3bjk2g1j/obj/arm64-v8a/libnative-lib.so	d828870acae0563c
