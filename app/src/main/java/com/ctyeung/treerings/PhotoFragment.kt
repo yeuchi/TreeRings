@@ -114,14 +114,14 @@ class PhotoFragment : BaseFragment() {
             }
 
             override fun onStopTrackingTouch(seek: SeekBar) {
-                if(thresholdValue !== seek.progress) {
+//                if(thresholdValue !== seek.progress) {
                     thresholdValue = seek.progress
 
                     binding.txtSeekValue.text = seek.progress.toString()
                     //seek.isIndeterminate = true
                     detectEdges(thresholdValue)
                     //seek.isIndeterminate = false
-                }
+//                }
             }
         })
     }
