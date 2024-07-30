@@ -109,9 +109,11 @@ class PhotoStorage(val context:Context) {
             val stream = context.contentResolver.openOutputStream(imageUri!!)
             try {
                 stream.use { out ->
-                    bmp.compress(Bitmap.CompressFormat.PNG, 100, out)
-                    out?.flush()
-                    out?.close()
+                    out?.let {
+                        bmp.compress(Bitmap.CompressFormat.PNG, 100, it)
+                        it.flush()
+                        it.close()
+                    }
                 }
             } catch (e: Exception) {
                 Log.d("PhtoStorage", "openOutputStream failed");

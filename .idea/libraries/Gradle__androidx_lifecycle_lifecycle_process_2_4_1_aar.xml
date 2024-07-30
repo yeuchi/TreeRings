@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: androidx.lifecycle:lifecycle-process:2.4.1@aar">
+  <library name="Gradle: androidx.lifecycle:lifecycle-process:2.4.1@aar" external-system-id="GRADLE">
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/daec6f2496db4dde53fdc018bbd1bc4a/transformed/lifecycle-process-2.4.1/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/daec6f2496db4dde53fdc018bbd1bc4a/transformed/lifecycle-process-2.4.1/AndroidManifest.xml" />

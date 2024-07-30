@@ -1,5 +1,5 @@
 <component name="libraryTable">
-  <library name="Gradle: androidx.test:runner:1.5.2@aar">
+  <library name="Gradle: androidx.test:runner:1.5.2@aar" external-system-id="GRADLE">
     <CLASSES>
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4f05f518fe7876865ae41441834ec1c5/transformed/runner-1.5.2/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/4f05f518fe7876865ae41441834ec1c5/transformed/runner-1.5.2/jars/classes.jar!/" />

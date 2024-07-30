@@ -4,14 +4,14 @@ plugins {
 }
 
 android {
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.ctyeung.treerings"
         minSdk 28
-        targetSdk 33
-        versionCode 6
-        versionName "6.0"
+        targetSdk 34
+        versionCode 7
+        versionName "7.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         externalNativeBuild {
@@ -44,6 +44,7 @@ android {
         viewBinding true
         dataBinding true
     }
+    namespace 'com.ctyeung.treerings'
 }
 
 dependencies {
