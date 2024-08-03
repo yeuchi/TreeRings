@@ -1,0 +1,3 @@
+/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/.cxx/RelWithDebInfo/1i336a3m/x86_64/CMakeFiles/rebuild_cache.dir
+/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/.cxx/RelWithDebInfo/1i336a3m/x86_64/CMakeFiles/edit_cache.dir
+/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/.cxx/RelWithDebInfo/1i336a3m/x86_64/CMakeFiles/native-lib.dir

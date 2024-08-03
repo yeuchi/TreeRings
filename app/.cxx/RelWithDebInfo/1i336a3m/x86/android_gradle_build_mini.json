@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/ctyeung/Library/Android/sdk/cmake/3.18.1/bin/ninja",
+      "-C",
+      "/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/.cxx/RelWithDebInfo/1i336a3m/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/ctyeung/Library/Android/sdk/cmake/3.18.1/bin/ninja",
+    "-C",
+    "/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/.cxx/RelWithDebInfo/1i336a3m/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "native-lib::@6890427a1f51a3e7e1df": {
+      "artifactName": "native-lib",
+      "abi": "x86",
+      "output": "/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/build/intermediates/cxx/RelWithDebInfo/1i336a3m/obj/x86/libnative-lib.so",
+      "runtimeFiles": []
+    }
+  }
+}
