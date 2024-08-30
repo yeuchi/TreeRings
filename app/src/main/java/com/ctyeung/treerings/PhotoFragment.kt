@@ -65,11 +65,10 @@ class PhotoFragment : BaseFragment() {
 
         if(photoUri != null) {
             bmpIn = photoStore.load(requireActivity().contentResolver, photoUri!!)
-            if(bmpIn != null) {
+            bmpIn?.let {
                 this.kernel = KernelFactory.create(KernelType.TYPE_XY45_DERIVATIVE)
                 this.bmpOut = BitmapUtils.create(bmpIn!!)
-                val photoEdges = binding.photoView
-                photoEdges.setImageBitmap(bmpOut)
+                binding.photoView.setImageBitmap(bmpOut)
                 detectEdges(thresholdValue)
                 showAlertDialog()
             }
@@ -91,16 +90,23 @@ class PhotoFragment : BaseFragment() {
      * Looks like I am writing over bmpIn somehow.
      */
     fun detectEdges(thresholdValue:Int){
-        if(this.kernel!=null && this.bmpIn!=null ) {
-            bmpIn = photoStore.load(requireActivity().contentResolver, photoUri!!)
-            //val bitmap = Bitmap.createScaledBitmap(bmpIn!!, bmpIn!!.width, bmpIn!!.height, false)
-            (this.activity as MainActivity).convolve(this.kernel!!, bmpIn!!, this.bmpOut!!, thresholdValue)
-            return
+        this.kernel.let {
+            this.bmpIn.let {
+                bmpIn = photoStore.load(requireActivity().contentResolver, photoUri!!)
+                //val bitmap = Bitmap.createScaledBitmap(bmpIn!!, bmpIn!!.width, bmpIn!!.height, false)
+                (this.activity as MainActivity).convolve(
+                    this.kernel!!,
+                    bmpIn!!,
+                    this.bmpOut!!,
+                    thresholdValue
+                )
+                return
+            }
         }
         Toast.makeText(this.context, "Can't detect edges", Toast.LENGTH_LONG).show()
     }
 
-    fun handleSeekBar() {
+    private fun handleSeekBar() {
         val seek = binding.seekbar
         seek.progress = this.thresholdValue
         seek.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
@@ -114,14 +120,17 @@ class PhotoFragment : BaseFragment() {
             }
 
             override fun onStopTrackingTouch(seek: SeekBar) {
-//                if(thresholdValue !== seek.progress) {
+                if(thresholdValue !== seek.progress) {
                     thresholdValue = seek.progress
 
                     binding.txtSeekValue.text = seek.progress.toString()
-                    //seek.isIndeterminate = true
+                    seek.isIndeterminate = true
+
+                    bmpOut = BitmapUtils.create(bmpIn!!)
+                    binding.photoView.setImageBitmap(bmpOut)
                     detectEdges(thresholdValue)
-                    //seek.isIndeterminate = false
-//                }
+                    seek.isIndeterminate = false
+                }
             }
         })
     }
