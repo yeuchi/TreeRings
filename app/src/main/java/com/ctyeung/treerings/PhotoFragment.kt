@@ -161,7 +161,7 @@ class PhotoFragment : BaseFragment() {
     }
 
     fun onClickNext() {
-        if(bmpOut != null) {
+        bmpOut.let {
             photoStore.setNames("edges", "treerings")
             val returned = photoStore.save(bmpOut!!)
             persistBitmapLines()
