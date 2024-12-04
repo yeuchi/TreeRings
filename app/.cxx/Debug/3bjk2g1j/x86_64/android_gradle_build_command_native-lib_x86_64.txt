@@ -1,7 +1,0 @@
-Executable : /Users/ctyeung/Library/Android/sdk/cmake/3.18.1/bin/ninja
-arguments : 
--C
-/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/.cxx/Debug/3bjk2g1j/x86_64
-native-lib
-jvmArgs : 
-

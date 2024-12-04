@@ -1,1 +1,0 @@
-/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/src/main/cpp/CMakeLists.txt

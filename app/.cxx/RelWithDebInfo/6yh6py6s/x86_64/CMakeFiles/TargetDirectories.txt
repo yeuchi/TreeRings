@@ -1,3 +1,0 @@
-/Users/ctyeung/Desktop/TreeRings/app/.cxx/RelWithDebInfo/6yh6py6s/x86_64/CMakeFiles/rebuild_cache.dir
-/Users/ctyeung/Desktop/TreeRings/app/.cxx/RelWithDebInfo/6yh6py6s/x86_64/CMakeFiles/edit_cache.dir
-/Users/ctyeung/Desktop/TreeRings/app/.cxx/RelWithDebInfo/6yh6py6s/x86_64/CMakeFiles/native-lib.dir

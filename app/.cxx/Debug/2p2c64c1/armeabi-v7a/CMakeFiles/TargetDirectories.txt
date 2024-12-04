@@ -1,3 +1,0 @@
-/Users/ctyeung/Desktop/TreeRings/app/.cxx/Debug/2p2c64c1/armeabi-v7a/CMakeFiles/rebuild_cache.dir
-/Users/ctyeung/Desktop/TreeRings/app/.cxx/Debug/2p2c64c1/armeabi-v7a/CMakeFiles/edit_cache.dir
-/Users/ctyeung/Desktop/TreeRings/app/.cxx/Debug/2p2c64c1/armeabi-v7a/CMakeFiles/native-lib.dir

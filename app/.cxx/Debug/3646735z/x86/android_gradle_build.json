@@ -1,0 +1,38 @@
+{
+  "buildFiles": [
+    "/Users/chiyeung/Documents/GitHub/Android/TreeRings/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/chiyeung/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/chiyeung/Documents/GitHub/Android/TreeRings/app/.cxx/Debug/3646735z/x86",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/chiyeung/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/chiyeung/Documents/GitHub/Android/TreeRings/app/.cxx/Debug/3646735z/x86",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "native-lib::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "x86",
+      "artifactName": "native-lib",
+      "output": "/Users/chiyeung/Documents/GitHub/Android/TreeRings/app/build/intermediates/cxx/Debug/3646735z/obj/x86/libnative-lib.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/Users/chiyeung/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang.lld",
+      "cppCompilerExecutable": "/Users/chiyeung/Library/Android/sdk/ndk/27.0.12077973/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++.lld"
+    }
+  },
+  "cFileExtensions": [],
+  "cppFileExtensions": [
+    "cpp"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "buildFiles": [
+    "/Users/chiyeung/Documents/GitHub/Android/TreeRings/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/chiyeung/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/chiyeung/Documents/GitHub/Android/TreeRings/app/.cxx/RelWithDebInfo/3q29301p/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/chiyeung/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/chiyeung/Documents/GitHub/Android/TreeRings/app/.cxx/RelWithDebInfo/3q29301p/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "native-lib::@6890427a1f51a3e7e1df": {
+      "artifactName": "native-lib",
+      "abi": "arm64-v8a",
+      "output": "/Users/chiyeung/Documents/GitHub/Android/TreeRings/app/build/intermediates/cxx/RelWithDebInfo/3q29301p/obj/arm64-v8a/libnative-lib.so",
+      "runtimeFiles": []
+    }
+  }
+}

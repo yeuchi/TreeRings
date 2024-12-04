@@ -1,2 +1,0 @@
-ninja: Entering directory `/Users/ctyeung/Desktop/TreeRings/app/.cxx/Debug/2p2c64c1/x86'
-ninja: no work to do.

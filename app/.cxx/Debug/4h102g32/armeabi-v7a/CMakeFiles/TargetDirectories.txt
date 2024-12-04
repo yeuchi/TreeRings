@@ -1,3 +1,0 @@
-/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/.cxx/Debug/4h102g32/armeabi-v7a/CMakeFiles/rebuild_cache.dir
-/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/.cxx/Debug/4h102g32/armeabi-v7a/CMakeFiles/edit_cache.dir
-/Users/ctyeung/Documents/GitHub/Android/TreeRings/app/.cxx/Debug/4h102g32/armeabi-v7a/CMakeFiles/native-lib.dir
