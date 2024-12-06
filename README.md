@@ -84,8 +84,16 @@ target_link_libraries( # Specifies the target library.
 +       -ljnigraphics
 ```
 
-### Version
-<img width="400" alt="Screen Shot 2020-10-25 at 2 56 56 PM" src="https://user-images.githubusercontent.com/1282659/97117537-65b16580-16d2-11eb-824e-f0cec35d49aa.png">
+### Android Studio
+Android Studio Ladybug | 2024.2.1 Patch 2
+
+### Test devices
+Note: Since there is C++ code, it is device and platform specific !
+May not run on your device(s).
+
+I tested it on the following.
+- Google Pixel 6a
+- Samsung S9
 
 ### Version 2.0 on Google Play
 
@@ -111,6 +119,9 @@ Substitude into distance equation: <sup>[7]</sup> \
 ### Version 4.0 on Google Play 
 
 1. Portrait mode only - so image does not get lost.
+
+### Version 9.9
+Update to Android Studio Ladybug | 2024.2.1 Patch 2
 
 
 ## Sample Images (dev/test)
