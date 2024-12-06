@@ -112,10 +112,10 @@ I tested it on the following.
 
 1. Portrait mode only - so image does not get lost.
 
-### Version 9.9
+### Version 9.0
 Update to Android Studio Ladybug | 2024.2.1 Patch 2
 
-## Slope intercept: <sup>[7]</sup> \
+## Slope intercept
 <img width="120" src="https://user-images.githubusercontent.com/1282659/130368524-358a666b-2782-4080-b221-223625f5c7f8.png">
 
 <img width="170" src="https://user-images.githubusercontent.com/1282659/130368528-260f5c0e-e274-4c52-a16a-91fe9b2ce63d.png">
